@@ -1,4 +1,5 @@
-# Project Name - Cafe Managemnet System(User Order Management)
+# Project Name - Cafe Managemnet System
+(User Order Management)
 # 
 #### Brief Description of Project - 
  There are few core functions in this system. 
