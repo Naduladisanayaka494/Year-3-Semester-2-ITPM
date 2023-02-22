@@ -11,4 +11,4 @@
 ### 6. Generate Bill(.pdf)
 ### 7. Display Total Amount
 
-#### Technologies used - Angular, Node.js, MySQL Database
+#### Technologies used - Angular, Node.js, Express.js, MySQL Database
