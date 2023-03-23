@@ -71,7 +71,7 @@
         </form>
         
          <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1"> &nbsp;
+            <img alt="image" src="{{ asset('/template/template/assets/img/avatar/avatar-1.png')}}" class="rounded-circle mr-1"> &nbsp;
             <div class="d-sm-none d-lg-inline-block"></div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title text-center text-lowercase"><br/>
@@ -91,14 +91,14 @@
           <div class="sidebar-brand">
 
           <a href="https://www.doenets.lk/" style="font-size:x-small"> Transport Management System</a>
-          <img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="shadow p-3 mb-5 bg-body rounded-circle" height="100px" width="100px">
+          <img alt="image" src="{{ asset(/template/template/assets/img/avatar/avatar-2.png')}}" class="shadow p-3 mb-5 bg-body rounded-circle" height="100px" width="100px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="<?=site_url()?>"><img alt="image" src="<?=base_url()?>/template/template/assets/img/avatar/1.jpg" class="rounded-circle" height="50px" width="50px">TMS</a>
+            <a href="#"><img alt="image" src="{{ asset('/template/template/assets/img/avatar/avatar-2.png')}}" class="rounded-circle" height="50px" width="50px">TMS</a>
           </div>
           <br/><br/>  <br/>
           <ul class="sidebar-menu">
-            <?= $this->include('layout/menu')?>
+            @include('layouts.menu')
           </ul>
        
         </aside>
@@ -106,7 +106,7 @@
 
       <!-- Main Content -->
       <div class="main-content">
-        <?= $this->renderSection('content') ?>
+        @renderSection('content')
       </div>
       <footer class="main-footer">
         <div class="footer-left">
@@ -117,21 +117,21 @@
   </div>
 
   <!-- General JS Scripts -->
-  <script src="<?=base_url()?>/template/template/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="<?=base_url()?>/template/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="<?=base_url()?>/template/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+  <script src="{{ asset('/template/template/node_modules/jquery/dist/jquery.min.js')}}"></script>
+  <script src="{{ asset('/template/template/node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+  <script src="{{ asset('/template/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js')}}"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
   <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
-  <script src="<?=base_url()?>/template/template/assets/js/stisla.js"></script>
+  <script src="{{ asset('/template/template/assets/js/stisla.js')}}"></script>
 
   <!-- JS Libraies -->
 
   <!-- Template JS File -->
-  <script src="<?=base_url()?>/template/template/assets/js/scripts.js"></script>
-  <script src="<?=base_url()?>/template/template/assets/js/custom.js"></script>
+  <script src="{{ asset('/template/template/assets/js/scripts.js')}}"></script>
+  <script src="{{ asset('/template/template/assets/js/custom.js')}}"></script>
  <!-- START: Template JS-->
         <script src="dist\vendors\jquery\jquery-3.3.1.min.js"></script>
         <script src="dist\vendors\jquery-ui\jquery-ui.min.js"></script>

@@ -1,6 +1,6 @@
-<?= $this->extend('layout/default') ?>
+@extends('layouts.default')
 
-<?= $this->section('content') ?>
+@section('content')
 
 <section class="section">
 
@@ -12,4 +12,4 @@
                     
         </section>
 
-<?= $this->endSection() ?>
+@endSection()
