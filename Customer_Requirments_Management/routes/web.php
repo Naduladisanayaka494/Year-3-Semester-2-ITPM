@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RequirementsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Dashboard');
 });
+
+Route::resource('/dashboard', DashboardController::class);
+Route::resource('/requirements', RequirementsController::class);
+
+
