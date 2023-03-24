@@ -15,7 +15,7 @@ use App\Http\Controllers\RequirementsController;
 */
 
 Route::get('/', function () {
-    return view('auth/Login');
+    return view('Dashboard');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
