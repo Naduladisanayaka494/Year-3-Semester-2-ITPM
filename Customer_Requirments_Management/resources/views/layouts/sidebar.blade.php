@@ -10,10 +10,10 @@
           <br/><br/>  <br/>
           <ul class="sidebar-menu">
             <li class="menu-header">Main Manu</li>
-            <li class=active><a class="nav-link" href="{{ url('/dashboard') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url('/dashboard') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
             <li class="menu-header">Customer</li>
             <li class="dropdown">
-             <li class=active><a class="nav-link" href="{{ url('/requirements') }}"><i class="fas fa-table"></i> <span>Requirements</span></a></li>
+             <li class="nav-item"><a class="nav-link" href="{{ url('/requirements') }}"><i class="fas fa-table"></i> <span>Requirements</span></a></li>
             </li>
         </aside>
       </div>

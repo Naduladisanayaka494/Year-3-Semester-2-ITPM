@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('Dashboard');
 });
 
-Route::resource('/dashboard', DashboardController::class);
-Route::resource('/requirements', RequirementsController::class);
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('/requirements', 'RequirementsController@index');
 
 
