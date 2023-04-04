@@ -16,7 +16,8 @@
                         <div class="card shadow p-3 mb-5 bg-body rounded">
                             <div class="card-body">
                                 <img src="{{ asset('/template/template/assets/img/avatar/Users.jpg') }}" class="rounded-circle-lg" alt="admins" class="float-right" width="50" height="50" align = "right">
-                                <h6 class="card-title font-weight-bold">Customers' Requirements</h6>&nbsp;
+                                <h5 class="card-title font-weight-bold">Customers' Requirements</h5> &nbsp;
+                                   <h5 class="card-subtitle mb-2 text-muted"><a href="{{url('requirements')}}">Show</a> &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h5>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                  <?php
