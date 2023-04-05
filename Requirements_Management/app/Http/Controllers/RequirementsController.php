@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Requirements;
 use Illuminate\Http\Request;
 
 class RequirementsController extends Controller
@@ -9,19 +9,22 @@ class RequirementsController extends Controller
    
     public function index()
     {
-        return view('Requirements.requirements');
+        $requirements = Requirements::all();
+        return view ('Requirements.requirements')->with('Requirements', $requirements);
     }
 
     
     public function create()
     {
-        //
+        return view('Requirements.add-requirements');
     }
 
    
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Requirements::create($input);
+        return redirect('requirements')->with('flash_message', 'Requirement Added!!');  
     }
 
    

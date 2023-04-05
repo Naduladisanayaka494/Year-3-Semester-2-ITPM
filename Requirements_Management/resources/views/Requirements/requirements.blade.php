@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-user"></i> &nbsp;  Customers' Requirements</h1>
+            <h1><i class="fa-solid fa-table"></i> &nbsp;  Customers' Requirements</h1>
             </ul>
           </div>
 
@@ -32,53 +32,38 @@
                                         <thead>
                                             <tr>
                                              
-                                                <th>DEMO</th>
-                                                <th>DEMO</th>
-                                                <th>DEMO</th>
-                                                <th>DEMO</th>
-                                                <th>DEMO</th>
-                                                <th>DEMO</th>
-                                                <th>DEMO</th>
-                                                <th>Date</th>
+                                                <th>DEMO1</th>
+                                                <th>DEMO2</th>
+                                                <th>DEMO3</th>
+                                                <th>DEMO4</th>
+                                                <th>DEMO5</th>
+                                                <th>DEMO6</th>
+                                                <th>DEMO7</th>
+                                                <th>DEMO8</th>
                                                 <th width = "200">Manage</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                             @foreach($Requirements as $item)
                                              <tr>
                                              
                                              
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                 <td>demo</td>
+                                                <td>{{ $item->DEMO1 }}</td>
+                                                <td>{{ $item->DEMO2 }}</td>
+                                                <td>{{ $item->DEMO3 }}</td>
+                                                <td>{{ $item->DEMO4 }}</td>
+                                                <td>{{ $item->DEMO5 }}</td>
+                                                <td>{{ $item->DEMO6 }}</td>
+                                                <td>{{ $item->DEMO7 }}</td>
+                                                 <td>{{ $item->DEMO8 }}</td>
                                                     <td>
                                                         <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <button type="button" value=""  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i>&nbsp; Delete</button>
                                                                                                                                                                                                                    
                                                     </td>
                                             </tr>
-                                            <tr>
-                                             
-                                             
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                <td>demo</td>
-                                                 <td>demo</td>
-                                                    <td>
-                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
-                                                         <button type="button" value=""  class="confirm_del_btn btn btn-danger"> <i class="fa fa-trash"></i>&nbsp; Delete</button>
-                                                                                                                                                                                                                   
-                                                    </td>
-                                            </tr>
-                                              
+                                             @endforeach
+                                        </tbody>  
                                     </table>
                                 </div>
                             </div>

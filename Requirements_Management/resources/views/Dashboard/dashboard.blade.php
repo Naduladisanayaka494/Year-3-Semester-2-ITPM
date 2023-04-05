@@ -23,7 +23,7 @@
                                  <?php
 
                                  $connection = mysqli_connect("localhost","root","","food_distribution_system_db","3307");
-                                 $query = "SELECT id FROM requirements_info ORDER BY id";
+                                 $query = "SELECT id FROM requirements ORDER BY id";
                                  $query_run = mysqli_query($connection, $query);
                                  $row = mysqli_num_rows($query_run);
 
