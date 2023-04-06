@@ -19,8 +19,4 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/requirements', [App\Http\Controllers\RequirementsController::class, 'index'])->name('requirements');
-//Route::post('/add-requirements', [App\Http\Controllers\RequirementsController::class, 'create'])->name('add-requirements');
-Route::controller(RequirementsController::class)->group(function(){
-    Route::post('/add-requirements', 'create')->name('add-requirements');
-  
-});
+Route::get('/add-requirements', [App\Http\Controllers\RequirementsController::class, 'create'])->name('add-requirements');
