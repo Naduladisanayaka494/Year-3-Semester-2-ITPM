@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-Route::get('/requirements', [App\Http\Controllers\RequirementsController::class, 'index'])->name('requirements');
-Route::get('/add-requirements', [App\Http\Controllers\RequirementsController::class, 'create'])->name('add-requirements');
+//Route::get('/requirements', [App\Http\Controllers\RequirementsController::class, 'index'])->name('requirements');
+Route::resource('/requirements/create', RequirementsController::class);
+Route::resource('/requirements', RequirementsController::class);

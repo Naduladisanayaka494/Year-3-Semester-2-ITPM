@@ -38,40 +38,40 @@
                                     <div class="row">                                           
                                         <div class="col-12">
                                             </div>
-                                             <form action = "{{ url('add-requirements') }}"  method="post">
+                                             <form action = "{{ url('requirements/create') }}"  method="post">
                                                  {!! csrf_field() !!}
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO1**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO1" name = "DEMO1">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO1" name = "DEMO1">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO2**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO2" name = "DEMO2">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO2" name = "DEMO2">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO3**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO3" name = "DEMO3">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO3" name = "DEMO3">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO4**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO4" name = "DEMO4">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO4" name = "DEMO4">
                                                     </div>
                                                          <div class="form-group col-md-6">
                                                         <label>DEMO5**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO5" name = "DEMO5">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO5" name = "DEMO5">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO6**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO6" name = "DEMO6">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO6" name = "DEMO6">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO7**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO7" name = "DEMO7">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO7" name = "DEMO7">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO8**</label>
-                                                        <input type="text" class="form-control rounded border border-dark" id="DEMO8" name = "DEMO8">
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO8" name = "DEMO8">
                                                     </div>
                                                  
                                                 <button type="submit" class="btn btn-success"><i class="fa-solid fa-check-circle"></i>&nbsp; SUBMIT</button>
