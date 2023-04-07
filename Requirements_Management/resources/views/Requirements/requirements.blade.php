@@ -47,7 +47,8 @@
                                              @foreach($Requirements as $item)
                                              <tr>
                                              
-                                             
+                                                
+                                                <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
                                                 <td>{{ $item->DEMO1 }}</td>
                                                 <td>{{ $item->DEMO2 }}</td>
                                                 <td>{{ $item->DEMO3 }}</td>
@@ -61,7 +62,7 @@
                                                          <form method="POST" action="{{ url('/requirements' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="confirm_del_btn btn btn-danger"  onclick="return confirm(Confirm)"><i class="fa fa-trash"></i> &nbsp;Delete</button>
+                                                <button type="submit" class="confirm_del_btn btn btn-danger"><i class="fa fa-trash"></i> &nbsp;Delete</button>
                                             </form>
                                                                                                                                                                                                                    
                                                     </td>
