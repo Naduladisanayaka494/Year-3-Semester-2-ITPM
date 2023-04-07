@@ -170,13 +170,13 @@
                 };
                 $.ajax({
                   type: "DELETE",
-                  url: "/requirements-delete/" +delete_id,
+                  url: '/requirements-delete/' +delete_id,
                   data:data,
                   success: function(response) {
-                    swal("Poof! Your imaginary file has been deleted!", {
+                    swal(response.status, {
                       icon: "success",
                     })
-                    .then((willDelete) => {
+                    .then((result) => {
                       location.reload();
                     });
 

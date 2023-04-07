@@ -48,6 +48,6 @@ class RequirementsController extends Controller
     public function destroy($id)
     {
        Requirements::destroy($id);
-        return redirect('requirements')->with('flash_message', 'deleted!');
+        return response()->json(['status'=> 'Requirements Deleted Successfully!']);
     }
 }

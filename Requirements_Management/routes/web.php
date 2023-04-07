@@ -21,3 +21,8 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 //Route::get('/requirements', [App\Http\Controllers\RequirementsController::class, 'index'])->name('requirements');
 Route::resource('/requirements/create', RequirementsController::class);
 Route::resource('/requirements', RequirementsController::class);
+// Route::controller(RequirementsController::class)->group(function(){
+//     //Route::post('/requirements/create', 'create')->name('Requirements.add-requirements');
+//     Route::resource('/requirements/create', RequirementsController::class);
+//    Route::get('/requirements', 'index')->name('Requirements.requirements');
+// });
