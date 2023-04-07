@@ -1,64 +1,59 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Delivery;
 use Illuminate\Http\Request;
 
 class deliverymanagementController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+  
     public function index()
     {
-        //
+        $delivery = Delivery::all();
+      return view ('delivery.index')->with('delivery', $delivery);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+  
     public function create()
     {
-        //
+        return view('delivery.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+  
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Delivery::create($input);
+        return redirect('delivery')->with('flash_message', 'Delivery Addedd!');
     }
 
-    /**
-     * Display the specified resource.
-     */
+  
     public function show(string $id)
     {
-        //
+       $delivery = Delivery::find($id);
+        return view('delivery.show')->with('delivery', $delivery);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+   
     public function edit(string $id)
     {
-        //
+        $delivery = Delivery::find($id);
+        return view('delivery.edit')->with('delivery', $delivery);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, string $id)
     {
-        //
+        $delivery = Delivery::find($id);
+        $input = $request->all();
+        $delivery->update($input);
+        return redirect('delivery')->with('flash_message', 'Delivery Updated!');  
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+   
     public function destroy(string $id)
     {
-        //
+        Delivery::destroy($id);
+        return redirect('delivery')->with('flash_message', 'Delivery deleted!');  
     }
 }
