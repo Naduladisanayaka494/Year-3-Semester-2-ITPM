@@ -127,68 +127,9 @@
         <script src="dist\vendors\datatable\buttons\js\buttons.flash.min.js"></script>
         <script src="dist\vendors\datatable\buttons\js\buttons.html5.min.js"></script>
         <script src="dist\vendors\datatable\buttons\js\buttons.print.min.js"></script>
-
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!-- END: Page Vendor JS-->
 
         <!-- START: Page Script JS-->        
         <script src="dist\js\datatable.script.js"></script>
         <!-- END: Page Script JS-->
 </html>
-
-
-<script>
-      $(document).ready(function() {
-
-              $.ajaxSetup({
-          headers: {
-              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          }
-      });
-
-        $('.confirm_del_btn').click(function(e){
-          e.preventDefault();
-
-          var delete_id = $(this).closest("tr").find('.reqdelete_val_id').val();
-          //alert(delete_id);
-
-          
-          swal({
-              title: "Are you sure?",
-              text: "Once deleted, you will not be able to recover this Data!",
-              icon: "warning",
-              buttons: true,
-              dangerMode: true,
-            })
-            .then((willDelete) => {
-              if (willDelete) {
-
-                var data = {
-
-                    "_token": $('input[name=_token]').val(),
-                    "id": delete_id,
-                };
-                $.ajax({
-                  type: "DELETE",
-                  url: '/requirements-delete/' +delete_id,
-                  data:data,
-                  success: function(response) {
-                    swal(response.status, {
-                      icon: "success",
-                    })
-                    .then((result) => {
-                      location.reload();
-                    });
-
-                  }
-
-
-
-                });
-              }
-            });
-       });
-
-      }); 
-      
-</script>
