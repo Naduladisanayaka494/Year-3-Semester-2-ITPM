@@ -13,26 +13,25 @@ class RequirementsController extends Controller
         return view ('Requirements.requirements')->with('Requirements', $requirements);
     }
    
-    public function show($id)
-    {
-        //
-    }
-
    
     public function edit($id)
     {
-        //
+        $requirements = Requirements::find($id);
+        return view('Requirements.edit-requirements')->with('requirements', $requirements);
     }
 
    
     public function update(Request $request, $id)
     {
-        //
+       $requirements = Requirements::find($id);
+        $input = $request->all();
+        $requirements->update($input);
+        return redirect('requirements');
     }
 
     public function destroy($id)
     {
        Requirements::destroy($id);
-        return redirect('requirements')->with('flash_message', 'deleted!');
+        return redirect('requirements');
     }
 }

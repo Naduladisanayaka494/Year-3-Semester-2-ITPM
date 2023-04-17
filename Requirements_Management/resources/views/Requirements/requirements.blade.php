@@ -58,7 +58,7 @@
                                                 <td>{{ $item->DEMO7 }}</td>
                                                  <td>{{ $item->DEMO8 }}</td>
                                                     <td>
-                                                        <a href="#"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
+                                                        <a href="{{ url('/requirements/' . $item->id . '/edit-requirements') }}"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <form method="POST" action="{{ url('/requirements' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
