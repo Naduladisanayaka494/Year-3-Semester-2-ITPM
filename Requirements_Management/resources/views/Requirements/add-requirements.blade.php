@@ -38,7 +38,7 @@
                                     <div class="row">                                           
                                         <div class="col-12">
                                             </div>
-                                             <form action = "{{ url('requirements/create') }}"  method="post">
+                                             <form action = "{{ url('add-req') }}"  method="post">
                                                  {!! csrf_field() !!}
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RequirementsController;
+use App\Http\Controllers\RequirementscreateController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-//Route::get('/requirements', [App\Http\Controllers\RequirementsController::class, 'index'])->name('requirements');
-Route::resource('/requirements/create', RequirementsController::class);
+Route::resource('/add-req', RequirementscreateController::class);
 Route::resource('/requirements', RequirementsController::class);
-// Route::controller(RequirementsController::class)->group(function(){
-//     //Route::post('/requirements/create', 'create')->name('Requirements.add-requirements');
-//     Route::resource('/requirements/create', RequirementsController::class);
-//    Route::get('/requirements', 'index')->name('Requirements.requirements');
-// });
+
+

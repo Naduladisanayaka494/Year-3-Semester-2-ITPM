@@ -12,21 +12,6 @@ class RequirementsController extends Controller
         $requirements = Requirements::all();
         return view ('Requirements.requirements')->with('Requirements', $requirements);
     }
-
-    
-    public function create()
-    {
-        return view('Requirements.add-requirements');
-    }
-
-   
-    public function store(Request $request)
-    {
-        $input = $request->all();
-        Requirements::create($input);
-        return redirect('requirements')->with('flash_message', 'Requirement Added!!');  
-    }
-
    
     public function show($id)
     {
