@@ -6,7 +6,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-file"></i>&nbsp;<i class="fa-solid fa-plus"></i> &nbsp; Edit the Requirements</h1>
+            <h1><i class="fa-solid fa-edit"></i> &nbsp; Edit the Requirements</h1>
             </ul>
           </div>
 
@@ -40,6 +40,7 @@
                                             </div>
                                              <form action = "{{ url('requirements/' .$requirements->id) }}"  method="post">
                                                  {!! csrf_field() !!}
+                                                  @method("PATCH")
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label>DEMO1**</label>
@@ -74,7 +75,7 @@
                                                         <input type="text" class="form-control rounded border border-info" id="DEMO8" name = "DEMO8" value="{{$requirements->DEMO8}}">
                                                     </div>
                                                  
-                                                <button type="submit" class="btn btn-success"><i class="fa-solid fa-check-circle"></i>&nbsp; SAVE</button>
+                                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check-circle"></i>&nbsp; SAVE</button>
                                              </form>
                                         </div>
                                     </div>
