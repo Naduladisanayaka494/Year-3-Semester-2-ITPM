@@ -16,14 +16,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::resource('/add-req', RequirementscreateController::class);
 Route::resource('/requirements', RequirementsController::class);
-
 
 
 Auth::routes();
