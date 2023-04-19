@@ -20,6 +20,6 @@ class IsAdmin
         {
             return $next($request);
         }
-        return redirect('home')->with('error', "you don't have permission to admin");
+        return redirect('#')->with('error', "you don't have permission to admin");
     }
 }

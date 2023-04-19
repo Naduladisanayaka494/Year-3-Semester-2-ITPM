@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Requirements;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,9 +21,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+     public function index()
     {
-        return view('user-dashboard');
+        $requirements = Requirements::all();
+        return view ('user-dashboard')->with('Requirements', $requirements);
     }
     
      public function adminHome()

@@ -52,6 +52,9 @@
         <link rel="stylesheet" href="dist\css\main.css">
         <!-- END: Custom CSS-->
 
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
 </head>
 
 <body>

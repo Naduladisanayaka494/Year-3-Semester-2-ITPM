@@ -10,7 +10,7 @@ class RequirementsController extends Controller
     public function index()
     {
         $requirements = Requirements::all();
-        return view ('Requirements.requirements')->with('Requirements', $requirements);
+        return view ('user-dashboard')->with('Requirements', $requirements);
     }
    
    

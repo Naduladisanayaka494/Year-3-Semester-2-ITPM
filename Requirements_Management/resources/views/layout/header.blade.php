@@ -10,19 +10,26 @@
           </div>
         </form>
         
-         <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="{{ asset ('/template/template/assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1"> &nbsp;
-            <div class="d-sm-none d-lg-inline-block"></div></a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title text-center text-lowercase"><br/>
-              <div class="dropdown-title text-center">
-              </div>
-            </div> 
-              <div class="dropdown-divider"></div>
-              <a href="{{url('')}}" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </a>
-            </div>
-          </li>
-        </ul>
+             <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                      
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+              
+                    </ul>
       </nav>
