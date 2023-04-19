@@ -1,4 +1,4 @@
-@extends('Admin.Adlayout.adapp')
+@extends('Admin.adlayout.adapp')
 
 @section('content')
 
@@ -17,7 +17,7 @@
                             <div class="card-body">
                                 <img src="{{ asset('/template/template/assets/img/avatar/Users.jpg') }}" class="rounded-circle-lg" alt="admins" class="float-right" width="50" height="50" align = "right">
                                 <h5 class="card-title font-weight-bold">Customers' Requirements</h5> &nbsp;
-                                   <h5 class="card-subtitle mb-2 text-muted"><a href="{{url('requirements')}}">Show</a> &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h5>
+                                   <h5 class="card-subtitle mb-2 text-muted"><a href="{{url('ad-requirements')}}">Show</a> &nbsp;<i class="fa-solid fa-hand-point-left fa-beat" style= "color: #011ffe;"></i></h5>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                  <?php
