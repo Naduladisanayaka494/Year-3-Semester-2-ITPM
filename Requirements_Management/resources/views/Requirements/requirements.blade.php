@@ -32,14 +32,14 @@
                                         <thead>
                                             <tr>
                                              
-                                                <th>DEMO1</th>
-                                                <th>DEMO2</th>
-                                                <th>DEMO3</th>
-                                                <th>DEMO4</th>
-                                                <th>DEMO5</th>
-                                                <th>DEMO6</th>
-                                                <th>DEMO7</th>
-                                                <th>DEMO8</th>
+                                                 <th>Customer Name</th>
+                                                <th>Email Address</th>
+                                                <th>Contact Number</th>
+                                                <th>Payment Method</th>
+                                                <th>Product Name</th>
+                                                <th>Quantity</th>
+                                                <th>Date</th>
+                                             
                                                 <th width = "200">Manage</th>
                                             </tr>
                                         </thead>
@@ -56,7 +56,7 @@
                                                 <td>{{ $item->DEMO5 }}</td>
                                                 <td>{{ $item->DEMO6 }}</td>
                                                 <td>{{ $item->DEMO7 }}</td>
-                                                 <td>{{ $item->DEMO8 }}</td>
+                                             
                                                     <td>
                                                         <a href="{{ url('/requirements/' . $item->id . '/edit') }}"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <form method="POST" action="{{ url('/requirements' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
