@@ -14,7 +14,11 @@
                     <div class="col-12  align-self-center">
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0">Requirements Information</h4></div>
+                              <div class="btn-group mb-2">
+                                   <a href="#"  class="btn btn-danger"> <i class="fa fa-file"></i>&nbsp; Report</a>
+                                </div>
                          </div>
+                        
                     </div>
                     
                 </div>
