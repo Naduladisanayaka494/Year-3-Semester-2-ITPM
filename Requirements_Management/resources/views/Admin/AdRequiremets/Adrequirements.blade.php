@@ -43,7 +43,7 @@
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
                                                 <th>Date</th>
-                                            
+                                            <th>Time</th>
                                                 <th width = "150">Manage</th>
                                             </tr>
                                         </thead>

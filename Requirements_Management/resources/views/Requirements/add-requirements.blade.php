@@ -70,6 +70,8 @@
                                                         <input type="text" class="form-control rounded border border-info" id="DEMO7" name = "DEMO7">
                                                     </div>
                                                      <div class="form-group col-md-6">
+                                                        <label>Time**</label>
+                                                        <input type="text" class="form-control rounded border border-info" id="DEMO8" name = "DEMO8">
                                                     </div>
                                                  
                                                 <button type="submit" class="btn btn-success"><i class="fa-solid fa-check-circle"></i>&nbsp; SUBMIT</button>

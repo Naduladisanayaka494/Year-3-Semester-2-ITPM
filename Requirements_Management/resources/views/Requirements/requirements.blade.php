@@ -39,7 +39,7 @@
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
                                                 <th>Date</th>
-                                             
+                                             <th>Time</th>
                                                 <th width = "200">Manage</th>
                                             </tr>
                                         </thead>
@@ -56,7 +56,7 @@
                                                 <td>{{ $item->DEMO5 }}</td>
                                                 <td>{{ $item->DEMO6 }}</td>
                                                 <td>{{ $item->DEMO7 }}</td>
-                                             
+                                              <td>{{ $item->DEMO8 }}</td>
                                                     <td>
                                                         <a href="{{ url('/requirements/' . $item->id . '/edit') }}"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <form method="POST" action="{{ url('/requirements' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
@@ -84,3 +84,19 @@
 </section>
 
 @endSection
+
+@section('scripts')
+
+<script>
+  
+    $(document).ready(function(){
+        $('.confirmdel').click(function (e){
+            e.preventDefault();
+            alert('Hello');
+        
+    });
+     });
+  
+</script>
+
+@endsection
