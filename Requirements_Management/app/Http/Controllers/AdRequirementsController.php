@@ -12,9 +12,4 @@ class AdRequirementsController extends Controller
         $requirements = Requirements::all();
         return view ('Admin.AdRequiremets.Adrequirements')->with('Requirements', $requirements);
     }
-
-    public function report(){
-        
-        return View('Admin.AdRequiremets.report');
-    }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use PDF;
 class reportController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class reportController extends Controller
      */
     public function index()
     {
-         return View('Admin.AdRequiremets.report');
+        $pdf = PDF::loadView('Admin.AdRequiremets.report');
+         return $pdf-download("report.pdf");
     }
 
     /**
