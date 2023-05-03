@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RequirementsController;
 use App\Http\Controllers\RequirementscreateController;
 use App\Http\Controllers\AdRequirementsController;
+use App\Http\Controllers\reportController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -26,6 +27,7 @@ Route::get('/ad-dashboard', [App\Http\Controllers\AdDashboardController::class, 
 Route::resource('/add-req', RequirementscreateController::class);
 Route::resource('/requirements', RequirementsController::class);
 Route::resource('/ad-requirements', AdRequirementsController::class);
+Route::resource('/generate-report', reportController::class);
 
 Auth::routes();
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Requirements;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
 class AdRequirementsController extends Controller
@@ -10,5 +11,10 @@ class AdRequirementsController extends Controller
     {
         $requirements = Requirements::all();
         return view ('Admin.AdRequiremets.Adrequirements')->with('Requirements', $requirements);
+    }
+
+    public function report(){
+        
+        return View('Admin.AdRequiremets.report');
     }
 }
