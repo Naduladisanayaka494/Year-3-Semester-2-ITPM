@@ -15,7 +15,7 @@
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0">Requirements Information</h4></div>
                               <div class="btn-group mb-2">
-                                   <a href="#"  class="btn btn-danger"> <i class="fa fa-file"></i>&nbsp; Report</a>
+                                   <a href="#"  class="btn btn-danger"> <i class="fa fa-file"></i>&nbsp; Requirement Report</a>
                                 </div>
                          </div>
                         
@@ -60,7 +60,7 @@
                                                 <td>{{ $item->DEMO5 }}</td>
                                                 <td>{{ $item->DEMO6 }}</td>
                                                 <td>{{ $item->DEMO7 }}</td>
-                                              
+                                               <td>{{ $item->DEMO8 }}</td>
                                                     <td>
                                                         <a href="#"  class="btn btn-success"> <i class="fa fa-eye"></i>&nbsp; View</a>
                                                                                                                                                                                                                    
