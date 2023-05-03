@@ -8,7 +8,6 @@
             <h1><i class="fa-solid fa-table"></i> &nbsp;Show Requirements</h1>
             </ul>
           </div>
-
            <!-- START: Breadcrumbs-->
                 <div class="row ">
                     <div class="col-12  align-self-center">
@@ -22,6 +21,7 @@
                     </div>
                     
                 </div>
+                
                 <!-- END: Breadcrumbs-->
      <!-- START: Main Content-->
         <main>
@@ -67,8 +67,12 @@
                                                     </td>
                                             </tr>
                                              @endforeach
-                                        </tbody>  
+                                        </tbody> 
+                                         
                                     </table>
+                                               <a href="{{url('/ad-requirements')}}">
+                    <button type="button" class = "btn btn-primary"><i class="fa-solid fa-arrow-rotate-left"></i>Reset</button>
+                    </a>
                                 </div>
                             </div>
                         </div> 
