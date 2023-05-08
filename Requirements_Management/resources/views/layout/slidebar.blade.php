@@ -2,7 +2,7 @@
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
 
-          <a href="https://www.doenets.lk/" style="font-size:x-small"> Food Distribution System</a>  &emsp;
+          <a href="#" style="font-size:x-small"> Food To Your Doorstep</a> &emsp;
           <img alt="image" src="{{ asset('/template/template/assets/img/avatar/SLIIT_Logo.png') }}" class="rounded-rectangular" height="70px" width="70px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
