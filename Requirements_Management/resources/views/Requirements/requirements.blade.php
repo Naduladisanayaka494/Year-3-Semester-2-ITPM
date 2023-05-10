@@ -28,10 +28,10 @@
                                 <!-- START: Card Data-->
                 <div class="row">
                     <div class="col-12 mt-3">
-                        <div class="card">
+                        <div class="card shadow p-3 mb-5 bg-white rounded">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="example" class="display table dataTable table-striped table-bordered">
+                                    <table id="example" class="display table dataTable table-striped table-bordered shadow p-3 mb-5 bg-white rounded">
                                         <thead>
                                             <tr>
                                              
@@ -43,7 +43,7 @@
                                                 <th>Quantity</th>
                                                 <th>Date</th>
                                              <th>Time</th>
-                                                <th width = "200">Manage</th>
+                                                <th width = "200"><center>Manage</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -61,15 +61,6 @@
             
               <div class="card-header"><h4> <i class="fa-solid fa-star"></i> LOGIN</h4></div>
               <div class="card-body">
-                @if ($errors ->any())
-                  <div class="alert alert-danger" role="alert">
-                    <ul>
-                      @foreach ($errors->all() as $error)
-                        <li>{{$error}}</li>
-                      @endforeach
-                    </ul>
-                </div>
-                @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

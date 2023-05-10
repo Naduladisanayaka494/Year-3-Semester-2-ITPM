@@ -14,6 +14,6 @@ class reportController extends Controller
     public function index()
     {
         $pdf = FacadePdf::loadview('Admin.AdRequiremets.report');
-        return $pdf->download('Requirements-Report.pdf');
+        return $pdf->download('Customer Requirements-Report.pdf');
     }
 }
