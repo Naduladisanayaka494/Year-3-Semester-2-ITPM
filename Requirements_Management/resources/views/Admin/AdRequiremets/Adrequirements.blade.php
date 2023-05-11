@@ -44,7 +44,7 @@
                                                 <th>Quantity</th>
                                                 <th>Date</th>
                                             <th>Time</th>
-                                                <th width = "150"><center>Manage</center></th>
+                                                <th width = "150">Manage</th>
                                             </tr>
                                         </thead>
                                         <tbody>
