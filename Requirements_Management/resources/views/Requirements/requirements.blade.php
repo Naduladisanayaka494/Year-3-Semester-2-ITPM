@@ -13,9 +13,9 @@
                 <div class="row ">
                     <div class="col-12  align-self-center">
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
-                            <div class="w-sm-100 mr-auto"><h4 class="mb-0">Requirements Information</h4></div>
+                            <div class="w-sm-100 mr-auto"><h4 class="mb-0" style="font-style: italic;">Requirements Information</h4></div>
                             <div class="btn-group mb-2">
-                                    <a href="{{url('add-req')}}"><button type="button" class="btn btn-outline-success rounded-btn btn-lg"><i class="fa-solid fa-plus"></i> &nbsp; Add New Requirements</button></a>
+                                    <a href="{{url('add-req')}}"><button type="button" class="btn btn-outline-success rounded-btn btn-lg"><i class="fa-solid fa-square-plus"></i> &nbsp; New Requirements</button></a>
                                 </div>
                          </div>
                     </div>
@@ -44,7 +44,7 @@
                                                 <th>Quantity</th>
                                                 <th>Preferred Delivery Day</th>
                                              <th>Preferred Delivery Time</th>
-                                                <th class="col-2"><center>Manage</center></th>
+                                                <th width = "200"><center>Manage</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>

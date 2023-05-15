@@ -12,9 +12,10 @@
                 <div class="row ">
                     <div class="col-12  align-self-center">
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
-                            <div class="w-sm-100 mr-auto"><h4 class="mb-0">Requirements Information</h4></div>
+                            <div class="w-sm-100 mr-auto"><h4 class="mb-0" style="font-style: italic;">Requirements Information</h4></div>
                               <div class="btn-group mb-2">
-                                   <a href="{{ url('generate-report') }}"  class="btn btn-danger"> <i class="fa fa-file"></i>&nbsp; Requirement Report</a>
+                                   <a href="{{ url('generate-report') }}"  class="btn btn-danger "> <i class="fa fa-cloud-download"></i>&nbsp; Requirement PDF</a>
+                              
                                 </div>
                          </div>
                         
@@ -37,14 +38,15 @@
                                             <tr>
                                              
                                                 <th>Customer Name</th>
+                                                  <th>Home Address</th>
                                                 <th>Email Address</th>
                                                 <th>Contact Number</th>
                                                 <th>Payment Method</th>
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
-                                                <th>Date</th>
-                                            <th>Time</th>
-                                                <th width = "150">Manage</th>
+                                                <th>Preferred Delivery Day</th>
+                                             <th>Preferred Delivery Time</th>
+                                                <th class="col-1"><center>Manage</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -53,14 +55,15 @@
                                              
                                                 
                                                 <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
-                                                <td>{{ $item->DEMO1 }}</td>
-                                                <td>{{ $item->DEMO2 }}</td>
-                                                <td>{{ $item->DEMO3 }}</td>
-                                                <td>{{ $item->DEMO4 }}</td>
-                                                <td>{{ $item->DEMO5 }}</td>
-                                                <td>{{ $item->DEMO6 }}</td>
-                                                <td>{{ $item->DEMO7 }}</td>
-                                               <td>{{ $item->DEMO8 }}</td>
+                                                 <td>{{ $item->customer_name }}</td>
+                                                <td>{{ $item->address }}</td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->phone }}</td>
+                                                <td>{{ $item->payment_methods }}</td>
+                                                <td>{{ $item->product_name }}</td>
+                                                <td>{{ $item->Quantity }}</td>
+                                                <td>{{ $item->preferred_day }} </td>
+                                              <td>{{ $item->preferred_time }}</td>
                                                     <td>
                                                         <a href="#"  class="btn btn-success"> <i class="fa fa-eye"></i>&nbsp; View</a>
                                                                                                                                                                                                                    
