@@ -45,32 +45,56 @@
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom01"><b>Customer Name</b><span style="color:red; font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control" id="customer_name" name = "customer_name" placeholder="Customer Name">
+                                                        <input type="text" class="form-control @error('customer_name') is-invalid @enderror"  id="customer_name" name = "customer_name" placeholder="Customer Name"  value="{{ old('customer_name') }}">
+                                                        @error('customer_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Your Name.</strong>
+                                    </span>
+                                @enderror
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom02"><b>Address</b><span style="color:red; font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control"  id="address" name = "address" placeholder="Address">
+                                                        <input type="text" class="form-control @error('address') is-invalid @enderror"   id="address" name = "address" placeholder="Address" value="{{ old('address') }}">
+                                                                               @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter your Address.</strong>
+                                    </span>
+                                @enderror
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom02"><b>Email Address</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control"  id="email" name = "email" placeholder="Email Address">
+                                                        <input type="text" class="form-control @error('email') is-invalid @enderror"  id="email" name = "email" placeholder="Email Address"value="{{ old('email') }}">
+                                     @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{$message}}</strong>
+                                    </span>
+                                @enderror
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustomUsername"><b>Contact Number</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" id="phone" name = "phone" placeholder="Contact Number">
+                                                            <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="text" class="form-control  @error('phone') is-invalid @enderror" id="phone" name = "phone" placeholder="Contact Number" maxlength="10" value="{{ old('phone') }}">
+                                                               @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{$message}}</strong>
+                                    </span>
+                                @enderror
                                                            
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2 mb-3">
                                                        <label><b>Payment Method</b><span style="color:red;font-size: 20px;">*</span></label><br/>
-                                                        <select name = "payment_methods" id="payment_methods" class="form-control rounded border border-info">
-                                                             <option value = "select" selected>--Select--</option>
-                                                            <option value = "Cash">Cash</option>
+                                                        <select name = "payment_methods" id="payment_methods" class="form-control  @error('payment_methods') is-invalid @enderror">
+                                                             <option selected disabled value="">--Select--</option>
+                                                            <option value = "Cash" >Cash</option>
                                                             <option value = "Credit Card">Credit Card</option>
                                                             <option value = "Debit Card">Debit Card</option>
                                                         </select>
+                                       <div id="validationServer04Feedback" class="invalid-feedback">
+      Please Enter your Payment Method.
+    </div>
                                                     </div>
+                                  
                                                    </div> 
                                                 </div>             
                                     </div>
@@ -91,19 +115,40 @@
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault01"><b>Product Name</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control" id="product_name" name = "product_name"  placeholder="Product Name">
+                                                        <input type="text" class="form-control  @error('product_name') is-invalid @enderror" id="product_name" name = "product_name"  placeholder="Product Name" value="{{ old('product_name') }}">
+                                             @error('product_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter product Name.</strong>
+                                    </span>
+                                @enderror
+                                                        
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault02"><b>Quantity</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control" id="Quantity" name = "Quantity" placeholder="Quantity">
+                                                        <input type="text" class="form-control @error('Quantity') is-invalid @enderror" id="Quantity" name = "Quantity" placeholder="Quantity" value="{{ old('Quantity') }}">
+                                                               @error('Quantity')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Quantity of products.</strong>
+                                    </span>
+                                @enderror
                                                     </div>
                                                       <div class="col-md-3 mb-3">
-                                                        <label for="validationDefault03"><b>Preferred Delivery Day</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="date" class="form-control" id="preferred_day" name = "preferred_day"  placeholder="Date">
+                                                        <label for="validationDefault03"><b>Preferred Delivery Date</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="date" class="form-control  @error('preferred_day') is-invalid @enderror" id="preferred_day" name = "preferred_day"  placeholder="Date" value="{{ old('preferred_day') }}">
+                                                                                 @error('preferred_day')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Preferred Delivery Date.</strong>
+                                    </span>
+                                @enderror
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault04"><b>Preferred Delivery Time</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="time" class="form-control" id="preferred_time" name = "preferred_time" placeholder="Time">
+                                                        <input type="time" class="form-control @error('preferred_time') is-invalid @enderror" id="preferred_time" name = "preferred_time" placeholder="Time" value="{{ old('preferred_time') }}">
+                                                                                                      @error('preferred_time')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Preferred Delivery Time.</strong>
+                                    </span>
+                                @enderror
                                                     </div>
                                                 </div>
                                                

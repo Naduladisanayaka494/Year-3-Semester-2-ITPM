@@ -45,7 +45,13 @@
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom01"><b>Customer Name</b><span style="color:red; font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control" id="customer_name" name = "customer_name" placeholder="Customer Name" value="{{$requirements->customer_name	}}">
+                                                        <input type="text" class="form-control  @error('customer_name') is-invalid @enderror" id="customer_name" name = "customer_name" placeholder="Customer Name" value="{{$requirements->customer_name	}}" value="{{ old('customer_name') }}">
+                                                                           @error('customer_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Your Name.</strong>
+                                    </span>
+                                @enderror
+                                           
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom01"><b>Address</b><span style="color:red; font-size: 20px;">*</span></label>
@@ -64,9 +70,9 @@
                                                      <div class="col-md-2 mb-3">
                                                        <label><b>Payment Method</b><span style="color:red; font-size: 20px;">*</span></label><br/>
                                                          <select name = "payment_methods" id="payment_methods" class="form-control rounded border border-info" value="{{$requirements->payment_methods}}">
-                                                          <option value = "Cash" {{$requirements->DEMO4 == "Cash" ? 'selected' : ''}}>Cash</option>
-                                                            <option value = "Credit Card" {{$requirements->DEMO4 == "Credit Card" ? 'selected' : ''}}>Credit Card</option>
-                                                            <option value = "Debit Card" {{$requirements->DEMO4 == "Debit Card" ? 'selected' : ''}}>Debit Card</option>
+                                                          <option value = "Cash" {{$requirements->payment_methods == "Cash" ? 'selected' : ''}}>Cash</option>
+                                                            <option value = "Credit Card" {{$requirements->payment_methods == "Credit Card" ? 'selected' : ''}}>Credit Card</option>
+                                                            <option value = "Debit Card" {{$requirements->payment_methods == "Debit Card" ? 'selected' : ''}}>Debit Card</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -90,13 +96,14 @@
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault01"><b>Product Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control" id="product_name" name = "product_name"  placeholder="Product Name"  value="{{$requirements->product_name}}">
+                                                        
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault02"><b>Quantity</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control" id="Quantity" name = "Quantity" placeholder="Quantity" value="{{$requirements->Quantity}}">
                                                     </div>
                                                      <div class="col-md-3 mb-3">
-                                                        <label for="validationDefault03"><b>Preferred Delivery Day</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <label for="validationDefault03"><b>Preferred Delivery Date</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="date" class="form-control" id="preferred_day" name = "preferred_day"  placeholder="Date" value="{{$requirements->preferred_day}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">

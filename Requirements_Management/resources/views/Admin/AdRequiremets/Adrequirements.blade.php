@@ -44,7 +44,7 @@
                                                 <th>Payment Method</th>
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
-                                                <th>Preferred Delivery Day</th>
+                                                <th>Preferred Delivery Date</th>
                                              <th>Preferred Delivery Time</th>
                                                 <th class="col-1"><center>Manage</center></th>
                                             </tr>
