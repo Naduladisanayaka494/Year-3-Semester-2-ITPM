@@ -45,30 +45,31 @@
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom01">Customer Name</label>
-                                                        <input type="text" class="form-control" id="DEMO1" name = "DEMO1" placeholder="Customer Name" value="{{$requirements->DEMO1}}">
+                                                        <input type="text" class="form-control" id="customer_name" name = "customer_name" placeholder="Customer Name" value="{{$requirements->customer_name	}}">
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom01">Address</label>
+                                                        <input type="text" class="form-control" id="address" name = "address" placeholder="Address" value="{{$requirements->address}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom02">Email Address</label>
-                                                        <input type="text" class="form-control"  id="DEMO2" name = "DEMO2" placeholder="Email Address"  value="{{$requirements->DEMO2}}">
+                                                        <input type="text" class="form-control"  id="email" name = "email" placeholder="Email Address"  value="{{$requirements->email}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustomUsername">Contact Number</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" id="DEMO3" name = "DEMO3" placeholder="Contact Number" value="{{$requirements->DEMO3}}">
-                                                           
+                                                            <input type="text" class="form-control" id="phone" name = "phone" placeholder="Contact Number" value="{{$requirements->phone}}">
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="col-md-4 mb-3">
+                                                     <div class="col-md-2 mb-3">
                                                        <label>Payment Method</label><br/>
-                                                         <select name = "DEMO4" id="DEMO4" class="form-control rounded border border-info" value="{{$requirements->DEMO4}}">
+                                                         <select name = "payment_methods" id="payment_methods" class="form-control rounded border border-info" value="{{$requirements->payment_methods}}">
                                                           <option value = "Cash" {{$requirements->DEMO4 == "Cash" ? 'selected' : ''}}>Cash</option>
                                                             <option value = "Credit Card" {{$requirements->DEMO4 == "Credit Card" ? 'selected' : ''}}>Credit Card</option>
                                                             <option value = "Debit Card" {{$requirements->DEMO4 == "Debit Card" ? 'selected' : ''}}>Debit Card</option>
                                                         </select>
                                                     </div>
-                                                   </div> 
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +79,7 @@
                      <div class="col-12 mt-3">
                         <div class="card shadow p-3 mb-5 bg-white rounded">
                             <div class="card-header">                               
-                                <h4 class="card-title">Product Details</h4>                                
+                                <h4 class="card-title">Product Related Details</h4>                                
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -88,24 +89,23 @@
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault01">Product Name</label>
-                                                        <input type="text" class="form-control" id="DEMO5" name = "DEMO5"  placeholder="Product Name"  value="{{$requirements->DEMO5}}">
+                                                        <input type="text" class="form-control" id="product_name" name = "product_name"  placeholder="Product Name"  value="{{$requirements->product_name}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault02">Quantity</label>
-                                                        <input type="text" class="form-control" id="DEMO6" name = "DEMO6" placeholder="Quantity" value="{{$requirements->DEMO6}}">
+                                                        <input type="text" class="form-control" id="Quantity" name = "Quantity" placeholder="Quantity" value="{{$requirements->Quantity}}">
                                                     </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="validationDefault03">Date</label>
-                                                        <input type="text" class="form-control" id="DEMO7" name = "DEMO7"  placeholder="Date" value="{{$requirements->DEMO7}}">
+                                                     <div class="col-md-3 mb-3">
+                                                        <label for="validationDefault03">Preferred Delivery Day</label>
+                                                        <input type="date" class="form-control" id="preferred_day" name = "preferred_day"  placeholder="Date" value="{{$requirements->preferred_day}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationDefault04">Time</label>
-                                                        <input type="text" class="form-control" id="DEMO8" name = "DEMO8" placeholder="Time" value="{{$requirements->DEMO8}}">
+                                                        <label for="validationDefault04">Preferred Delivery Time</label>
+                                                        <input type="time" class="form-control" id="preferred_time" name = "preferred_time" placeholder="Time" value="{{$requirements->preferred_time}}">
                                                     </div>
-                                                   
-</div>
+                                                  
+                                                </div>
+                                                    
                                               
                                         </div>
                                     </div>

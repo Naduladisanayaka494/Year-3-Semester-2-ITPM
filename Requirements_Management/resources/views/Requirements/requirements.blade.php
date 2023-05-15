@@ -35,15 +35,16 @@
                                         <thead>
                                             <tr>
                                              
-                                                 <th>Customer Name</th>
-                                                <th>Email Address</th>
-                                                <th>Contact Number</th>
-                                                <th>Payment Method</th>
-                                                <th>Product Name</th>
-                                                <th>Quantity</th>
-                                                <th>Date</th>
-                                             <th>Time</th>
-                                                <th width = "200"><center>Manage</center></th>
+                                                 <th class="col-3">Customer Name</th>
+                                                  <th class="col-3">Home Address</th>
+                                                <th class="col-3">Email Address</th>
+                                                <th class="col-3">Contact Number</th>
+                                                <th class="col-3">Payment Method</th>
+                                                <th class="col-3">Product Name</th>
+                                                <th class="col-3">Quantity</th>
+                                                <th class="col-3">Preferred Delivery Day</th>
+                                             <th class = "col-3">Preferred Delivery Time</th>
+                                                <th width = "1000"><center>Manage</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -52,14 +53,15 @@
                                              
                                                 
                                                 <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
-                                                <td>{{ $item->DEMO1 }}</td>
-                                                <td>{{ $item->DEMO2 }}</td>
-                                                <td>{{ $item->DEMO3 }}</td>
-                                                <td>{{ $item->DEMO4 }}</td>
-                                                <td>{{ $item->DEMO5 }}</td>
-                                                <td>{{ $item->DEMO6 }}</td>
-                                                <td>{{ $item->DEMO7 }}</td>
-                                              <td>{{ $item->DEMO8 }}</td>
+                                                <td>{{ $item->customer_name }}</td>
+                                                <td>{{ $item->address }}</td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->phone }}</td>
+                                                <td>{{ $item->payment_methods }}</td>
+                                                <td>{{ $item->product_name }}</td>
+                                                <td>{{ $item->Quantity }}</td>
+                                                <td>{{ $item->preferred_day }} </td>
+                                              <td>{{ $item->preferred_time }}</td>
                                                     <td>
                                                         <a href="{{ url('/requirements/' . $item->id . '/edit') }}"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <form method="POST" action="{{ url('/requirements' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
