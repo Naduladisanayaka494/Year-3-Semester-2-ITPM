@@ -35,16 +35,16 @@
                                         <thead>
                                             <tr>
                                              
-                                                 <th class="col-3">Customer Name</th>
-                                                  <th class="col-3">Home Address</th>
-                                                <th class="col-3">Email Address</th>
-                                                <th class="col-3">Contact Number</th>
-                                                <th class="col-3">Payment Method</th>
-                                                <th class="col-3">Product Name</th>
-                                                <th class="col-3">Quantity</th>
-                                                <th class="col-3">Preferred Delivery Day</th>
-                                             <th class = "col-3">Preferred Delivery Time</th>
-                                                <th width = "1000"><center>Manage</center></th>
+                                                 <th>Customer Name</th>
+                                                  <th>Home Address</th>
+                                                <th>Email Address</th>
+                                                <th>Contact Number</th>
+                                                <th>Payment Method</th>
+                                                <th>Product Name</th>
+                                                <th>Quantity</th>
+                                                <th>Preferred Delivery Day</th>
+                                             <th>Preferred Delivery Time</th>
+                                                <th class="col-2"><center>Manage</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>
