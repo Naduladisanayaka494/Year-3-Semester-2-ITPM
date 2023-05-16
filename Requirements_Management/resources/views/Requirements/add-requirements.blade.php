@@ -86,7 +86,7 @@
                                                        <label><b>Payment Method</b><span style="color:red;font-size: 20px;">*</span></label><br/>
                                                         <select name = "payment_methods" id="payment_methods" class="form-control  @error('payment_methods') is-invalid @enderror">
                                                              <option selected disabled value="">--Select--</option>
-                                                            <option value = "Cash On Delivery" {{ old('payment_methods') === 'Cash On Delivery' ? 'selected' : '' }}>Cash on Delivery</option>
+                                                            <option value = "Cash on Delivery" {{ old('payment_methods') === 'Cash on Delivery' ? 'selected' : '' }}>Cash on Delivery</option>
                                                             <option value = "Credit Card" {{ old('payment_methods') === 'Credit Card' ? 'selected' : '' }}>Credit Card</option>
                                                             <option value = "Debit Card" {{ old('payment_methods') === 'Debit Card' ? 'selected' : '' }}>Debit Card</option>
                                                         </select>

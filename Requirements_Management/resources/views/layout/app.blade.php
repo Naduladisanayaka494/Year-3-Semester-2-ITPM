@@ -26,7 +26,8 @@
         <link rel="stylesheet" href="dist\vendors\flags-icon\css\flag-icon.min.css"> 
         <link rel="stylesheet" href="dist\vendors\flag-select\css\flags.css">
         <!-- END Template CSS-->   
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
         <!-- START: Page CSS-->
         <link rel="stylesheet" href="dist\vendors\datatable\css\dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="dist\vendors\datatable\buttons\css\buttons.bootstrap4.min.css">
@@ -131,9 +132,21 @@
         <!-- END: Page Vendor JS-->
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
        
+     @if (session('status'))
+ <script>
+       swal({
+
+        title: '{{ session('status') }}',
+        icon: '{{ session('statuscode') }}',
+        button:"OK",
+       });
+       </script>
+       @endif 
         <!-- START: Page Script JS-->        
         <script src="dist\js\datatable.script.js"></script>
         <!-- END: Page Script JS-->
+
+
 </html>
 
 

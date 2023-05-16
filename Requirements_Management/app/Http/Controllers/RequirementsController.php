@@ -26,12 +26,17 @@ class RequirementsController extends Controller
        $requirements = Requirements::find($id);
         $input = $request->all();
         $requirements->update($input);
-        return redirect('requirements')->with('flash_message', 'req Updated!');
+
+        
+        session()->flash('statuscode', 'success');
+        return redirect('requirements')->with('status', 'Requirements Details are updated Successful..!!');
     }
 
     public function destroy($id)
     {
        Requirements::destroy($id);
-        return redirect('requirements');
+
+       session()->flash('statuscode', 'error');
+        return redirect('requirements')->with('status', 'Requirements Details are deleted Successful..!!');
     }
 }

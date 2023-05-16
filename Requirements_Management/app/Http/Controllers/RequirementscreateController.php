@@ -30,6 +30,7 @@ class RequirementscreateController extends Controller
         ]);
         $input = $request->all();
         Requirements::create($input);
-        return redirect('requirements')->with('flash_message', 'Requirement Added!!');  
+          session()->flash('statuscode', 'success');
+        return redirect()->back()->with('status', 'Requirements Details are added Successful..!!');  
     }
 }

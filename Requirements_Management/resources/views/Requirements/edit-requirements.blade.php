@@ -67,7 +67,7 @@
                                                             <input type="text" class="form-control" id="phone" name = "phone" placeholder="Contact Number" value="{{$requirements->phone}}">
                                                         </div>
                                                     </div>
-                                                     <div class="col-md-2 mb-3">
+                                                     <div class="col-md-2.5 mb-3">
                                                        <label><b>Payment Method</b><span style="color:red; font-size: 20px;">*</span></label><br/>
                                                          <select name = "payment_methods" id="payment_methods" class="form-control rounded border border-info" value="{{$requirements->payment_methods}}">
                                                             <option selected disabled value="">--Select--</option>
