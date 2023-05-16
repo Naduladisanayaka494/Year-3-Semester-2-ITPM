@@ -44,7 +44,7 @@
                                                   @method("PATCH")
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom01"><b>Customer Name</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <label for="validationCustom01"><b>Customer Full Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control  @error('customer_name') is-invalid @enderror" id="customer_name" name = "customer_name" placeholder="Customer Name" value="{{$requirements->customer_name	}}" value="{{ old('customer_name') }}">
                                                                            @error('customer_name')
                                     <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                                            
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom01"><b>Address</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <label for="validationCustom01"><b>Home Address</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control" id="address" name = "address" placeholder="Address" value="{{$requirements->address}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">
@@ -70,7 +70,8 @@
                                                      <div class="col-md-2 mb-3">
                                                        <label><b>Payment Method</b><span style="color:red; font-size: 20px;">*</span></label><br/>
                                                          <select name = "payment_methods" id="payment_methods" class="form-control rounded border border-info" value="{{$requirements->payment_methods}}">
-                                                          <option value = "Cash" {{$requirements->payment_methods == "Cash on Delivery" ? 'selected' : ''}}>Cash on Delivery</option>
+                                                            <option selected disabled value="">--Select--</option>
+                                                          <option value = "Cash on Delivery" {{$requirements->payment_methods == "Cash on Delivery" ? 'selected' : ''}}>Cash on Delivery</option>
                                                             <option value = "Credit Card" {{$requirements->payment_methods == "Credit Card" ? 'selected' : ''}}>Credit Card</option>
                                                             <option value = "Debit Card" {{$requirements->payment_methods == "Debit Card" ? 'selected' : ''}}>Debit Card</option>
                                                         </select>
@@ -94,22 +95,43 @@
                                             <form>
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
+                                                        <label for="validationDefault01"><b>Product Category</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control" id="product_category" name = "product_category"  placeholder="Product Name"  value="{{$requirements->product_category}}">
+                                                        
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
                                                         <label for="validationDefault01"><b>Product Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control" id="product_name" name = "product_name"  placeholder="Product Name"  value="{{$requirements->product_name}}">
                                                         
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationDefault02"><b>Quantity</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <label for="validationDefault02"><b>Quantity Preference</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control" id="Quantity" name = "Quantity" placeholder="Quantity" value="{{$requirements->Quantity}}">
                                                     </div>
-                                                     <div class="col-md-3 mb-3">
+                                                     <div class="col-md-4 mb-3">
+                                                       <label><b>Preferred Delivery Time</b><span style="color:red; font-size: 20px;">*</span></label><br/>
+                                                         <select name = "preferred_time" id="preferred_time" class="form-control rounded border border-info" value="{{$requirements->preferred_time}}">
+                                                            <option selected disabled value="">--Select--</option>
+                                                          <option value = "Morning" {{$requirements->preferred_time == "Morning" ? 'selected' : ''}}>Morning</option>
+                                                            <option value = "Afternoon" {{$requirements->preferred_time == "Afternoon" ? 'selected' : ''}}>Afternoon</option>
+                                                            <option value = "Evening" {{$requirements->preferred_time == "Evening" ? 'selected' : ''}}>Evening</option>
+                                                        </select>
+                                                    </div>
+                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationDefault03"><b>Preferred Delivery Date</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="date" class="form-control" id="preferred_day" name = "preferred_day"  placeholder="Date" value="{{$requirements->preferred_day}}">
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationDefault04"><b>Preferred Delivery Time</b><span style="color:red; font-size: 20px;">*</span></label>
-                                                        <input type="time" class="form-control" id="preferred_time" name = "preferred_time" placeholder="Time" value="{{$requirements->preferred_time}}">
+                                                       <label><b>Packaging Preference</b><span style="color:red; font-size: 20px;">*</span></label><br/>
+                                                         <select name = "pack_preference" id="pack_preference" class="form-control rounded border border-info" value="{{$requirements->pack_preference}}">
+                                                            <option selected disabled value="">--Select--</option>
+                                                          <option value = "Loose Vegetables" {{$requirements->pack_preference == "Loose Vegetables" ? 'selected' : ''}}>Loose Vegetables</option>
+                                                            <option value = "Pre-Packaged" {{$requirements->pack_preference == "Pre-Packaged" ? 'selected' : ''}}>Pre-Packaged</option>
+                                                            <option value = "Eco-friendly Packaging" {{$requirements->pack_preference == "Eco-friendly Packaging" ? 'selected' : ''}}>Eco-friendly Packaging</option>
+                                                            <option value = "Customizable Packaging" {{$requirements->pack_preference == "Customizable Packaging" ? 'selected' : ''}}>Customizable Packaging</option>
+                                                        </select>
                                                     </div>
+                                                    
                                                   
                                                 </div>
                                                     

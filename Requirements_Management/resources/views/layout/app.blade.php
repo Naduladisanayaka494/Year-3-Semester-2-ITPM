@@ -69,8 +69,6 @@
 @include('layout.footer')
 
 
-
-
 </body>
 
 
@@ -131,8 +129,11 @@
         <script src="dist\vendors\datatable\buttons\js\buttons.html5.min.js"></script>
         <script src="dist\vendors\datatable\buttons\js\buttons.print.min.js"></script>
         <!-- END: Page Vendor JS-->
-
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+       
         <!-- START: Page Script JS-->        
         <script src="dist\js\datatable.script.js"></script>
         <!-- END: Page Script JS-->
 </html>
+
+
