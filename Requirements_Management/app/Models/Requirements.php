@@ -9,5 +9,5 @@ class Requirements extends Model
 {
     protected $table = 'requirements';
     protected $primaryKey = 'id';
-    protected $fillable = ['customer_name','address', 'email', 'phone', 'payment_methods', 'product_name', 'Quantity', 'preferred_day', 'preferred_time'];
+    protected $fillable = ['customer_name','address', 'email', 'phone', 'payment_methods','product_category', 'product_name', 'Quantity','pack_preference', 'preferred_day', 'preferred_time'];
 }

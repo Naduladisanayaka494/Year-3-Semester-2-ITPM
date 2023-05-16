@@ -20,8 +20,10 @@ class RequirementscreateController extends Controller
               'email' => 'required|email',
             'phone' => 'required|min:10|max:10',
              'payment_methods' => 'required',
+             'product_category' => 'required',
            'product_name' => 'required',
            'Quantity' => 'required',
+           'pack_preference' => 'required',
             'preferred_day' => 'required',
             'preferred_time'=> 'required',
 

@@ -44,7 +44,7 @@
                                                  {!! csrf_field() !!}
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom01"><b>Customer Name</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <label for="validationCustom01"><b>Customer Full Name</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control @error('customer_name') is-invalid @enderror"  id="customer_name" name = "customer_name" placeholder="Customer Name"  value="{{ old('customer_name') }}">
                                                         @error('customer_name')
                                     <span class="invalid-feedback" role="alert">
@@ -53,7 +53,7 @@
                                 @enderror
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom02"><b>Address</b><span style="color:red; font-size: 20px;">*</span></label>
+                                                        <label for="validationCustom02"><b>Home Address</b><span style="color:red; font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control @error('address') is-invalid @enderror"   id="address" name = "address" placeholder="Address" value="{{ old('address') }}">
                                                                                @error('address')
                                     <span class="invalid-feedback" role="alert">
@@ -82,17 +82,17 @@
                                                            
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 mb-3">
+                                                    <div class="col-md-2.5 mb-3">
                                                        <label><b>Payment Method</b><span style="color:red;font-size: 20px;">*</span></label><br/>
                                                         <select name = "payment_methods" id="payment_methods" class="form-control  @error('payment_methods') is-invalid @enderror">
                                                              <option selected disabled value="">--Select--</option>
-                                                            <option value = "Cash" >Cash</option>
-                                                            <option value = "Credit Card">Credit Card</option>
-                                                            <option value = "Debit Card">Debit Card</option>
+                                                            <option value = "Cash On Delivery" {{ old('payment_methods') === 'Cash On Delivery' ? 'selected' : '' }}>Cash on Delivery</option>
+                                                            <option value = "Credit Card" {{ old('payment_methods') === 'Credit Card' ? 'selected' : '' }}>Credit Card</option>
+                                                            <option value = "Debit Card" {{ old('payment_methods') === 'Debit Card' ? 'selected' : '' }}>Debit Card</option>
                                                         </select>
-                                       <div id="validationServer04Feedback" class="invalid-feedback">
-      Please Enter your Payment Method.
-    </div>
+    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter your Payment Method.</strong>
+                                    </span>
                                                     </div>
                                   
                                                    </div> 
@@ -114,24 +114,48 @@
                                             <form>
                                                 <div class="form-row">
                                                     <div class="col-md-4 mb-3">
+                                                        <label for="validationDefault01"><b>Product Category</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control  @error('product_category') is-invalid @enderror" id="product_category" name = "product_category"  placeholder="Product Category" value="{{ old('product_category') }}">
+                                             @error('product_category')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Product Category.</strong>
+                                    </span>
+                                @enderror
+                                                        
+                                                    </div>
+                                                        <div class="col-md-4 mb-3">
                                                         <label for="validationDefault01"><b>Product Name</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="text" class="form-control  @error('product_name') is-invalid @enderror" id="product_name" name = "product_name"  placeholder="Product Name" value="{{ old('product_name') }}">
                                              @error('product_name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Please Enter product Name.</strong>
+                                        <strong>Please Enter Product Name.</strong>
                                     </span>
                                 @enderror
                                                         
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationDefault02"><b>Quantity</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="text" class="form-control @error('Quantity') is-invalid @enderror" id="Quantity" name = "Quantity" placeholder="Quantity" value="{{ old('Quantity') }}">
+                                                        <label for="validationDefault02"><b>Quantity Preference</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                        <input type="text" class="form-control @error('Quantity') is-invalid @enderror" id="Quantity" name = "Quantity" placeholder="Quantity Preference" value="{{ old('Quantity') }}">
                                                                @error('Quantity')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Please Enter Quantity of products.</strong>
+                                        <strong>Please Enter Quantity of Products.</strong>
                                     </span>
                                 @enderror
                                                     </div>
+                                                      <div class="col-md-4 mb-3">
+                                                        <label for="validationDefault02"><b>Preferred Delivery Time</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                      <select name = "preferred_time" id="preferred_time" class="form-control  @error('preferred_time') is-invalid @enderror">
+                                                        <option selected disabled value="">--Select--</option>
+                                                           <option value = "Morning" {{ old('preferred_time') === 'Morning' ? 'selected' : '' }}>Morning</option>
+                                                            <option value = "Afternoon" {{ old('preferred_time') === 'Afternoon' ? 'selected' : '' }}>Afternoon</option>
+                                                            <option value = "Evening" {{ old('preferred_time') === 'Evening' ? 'selected' : '' }}>Evening</option>
+                                                        </select>
+                                                         
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Preferred Delivery Time.</strong>
+                                    </span>
+                               
+                                                      </div>
                                                       <div class="col-md-3 mb-3">
                                                         <label for="validationDefault03"><b>Preferred Delivery Date</b><span style="color:red;font-size: 20px;">*</span></label>
                                                         <input type="date" class="form-control  @error('preferred_day') is-invalid @enderror" id="preferred_day" name = "preferred_day"  placeholder="Date" value="{{ old('preferred_day') }}">
@@ -140,16 +164,21 @@
                                         <strong>Please Enter Preferred Delivery Date.</strong>
                                     </span>
                                 @enderror
+
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationDefault04"><b>Preferred Delivery Time</b><span style="color:red;font-size: 20px;">*</span></label>
-                                                        <input type="time" class="form-control @error('preferred_time') is-invalid @enderror" id="preferred_time" name = "preferred_time" placeholder="Time" value="{{ old('preferred_time') }}">
-                                                                                                      @error('preferred_time')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>Please Enter Preferred Delivery Time.</strong>
+                                                        <label for="validationDefault02"><b>Packaging Preference</b><span style="color:red;font-size: 20px;">*</span></label>
+                                                      <select name = "pack_preference" id="pack_preference" class="form-control  @error('pack_preference') is-invalid @enderror">
+                                                         <option selected disabled value="">--Select--</option>
+                                                           <option value = "Loose Vegetables" {{ old('pack_preference') === 'Loose Vegetables' ? 'selected' : '' }}>Loose Vegetables</option>
+                                                            <option value = "Pre-Packaged" {{ old('pack_preference') === 'Pre-Packaged' ? 'selected' : '' }}>Pre-Packaged</option>
+                                                            <option value = "Eco-friendly Packaging" {{ old('pack_preference') === 'Eco-friendly Packaging' ? 'selected' : '' }}>Eco-friendly Packaging</option>
+                                                            <option value = "Customizable Packaging" {{ old('pack_preference') === 'Customizable Packaging' ? 'selected' : '' }}>Customizable Packaging</option>
+                                                        </select>
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>Please Enter Packaging Preferences.</strong>
                                     </span>
-                                @enderror
-                                                    </div>
+                                                      </div>
                                                 </div>
                                                
                                                   

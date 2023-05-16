@@ -70,7 +70,7 @@
                                                      <div class="col-md-2 mb-3">
                                                        <label><b>Payment Method</b><span style="color:red; font-size: 20px;">*</span></label><br/>
                                                          <select name = "payment_methods" id="payment_methods" class="form-control rounded border border-info" value="{{$requirements->payment_methods}}">
-                                                          <option value = "Cash" {{$requirements->payment_methods == "Cash" ? 'selected' : ''}}>Cash</option>
+                                                          <option value = "Cash" {{$requirements->payment_methods == "Cash on Delivery" ? 'selected' : ''}}>Cash on Delivery</option>
                                                             <option value = "Credit Card" {{$requirements->payment_methods == "Credit Card" ? 'selected' : ''}}>Credit Card</option>
                                                             <option value = "Debit Card" {{$requirements->payment_methods == "Debit Card" ? 'selected' : ''}}>Debit Card</option>
                                                         </select>

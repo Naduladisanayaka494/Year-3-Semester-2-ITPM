@@ -40,8 +40,10 @@
                                                 <th>Email Address</th>
                                                 <th>Contact Number</th>
                                                 <th>Payment Method</th>
+                                                <th>Product Category</th>
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
+                                                <th>Packaging Preference</th>
                                                 <th>Preferred Delivery Date</th>
                                              <th>Preferred Delivery Time</th>
                                                 <th width = "200"><center>Manage</center></th>
@@ -58,8 +60,10 @@
                                                 <td>{{ $item->email }}</td>
                                                 <td>{{ $item->phone }}</td>
                                                 <td>{{ $item->payment_methods }}</td>
+                                                 <td>{{ $item->product_category }}</td>
                                                 <td>{{ $item->product_name }}</td>
                                                 <td>{{ $item->Quantity }}</td>
+                                                <td>{{ $item->pack_preference }}</td>
                                                 <td>{{ $item->preferred_day }} </td>
                                               <td>{{ $item->preferred_time }}</td>
                                                     <td>
