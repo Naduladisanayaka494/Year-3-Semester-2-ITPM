@@ -15,7 +15,7 @@
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0" style="font-style: italic;">Requirements Information</h4></div>
                               <div class="btn-group mb-2">
-                                   <a href="{{ url('generate-report') }}"  class="btn btn-danger "> <i class="fa fa-cloud-download"></i>&nbsp; Requirement PDF</a>
+                                   <!-- <a href="{{ url('generate-report') }}"  class="btn btn-danger "> <i class="fa fa-cloud-download"></i>&nbsp; Requirement PDF</a> -->
                               
                                 </div>
                          </div>
@@ -37,14 +37,13 @@
                                     <table id="example" class="display table dataTable table-striped table-bordered shadow p-3 mb-5 bg-white rounded">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>Product Category</th>
-                                                <th>Product Name</th>
-                                                <th>Quantity</th>
-                                                <th>Packaging Preference</th>
-                                                <th>Preferred Delivery Date</th>
-                                             <th>Preferred Delivery Time</th>
-                                                <th><center>Manage</center></th>
+                                                <th><center>Product Category</center></th>
+                                                <th><center>Product Name</center></th>
+                                                <th><center>Quantity</center></th>
+                                                <th><center>Packaging Preference</center></th>
+                                                <th><center>Preferred Delivery Date</center></th>
+                                             <th><center>Preferred Delivery Time</center></th>
+                                                <th><center>Details Report</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -53,17 +52,15 @@
                                              
                                                 
                                                 <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
-                                               
-                                                 <td class="req_id">{{ $item->id }}</td>
-                                                 <td >{{ $item->product_category }}</td>
-                                                <td>{{ $item->product_name }}</td>
-                                                <td>{{ $item->Quantity }}</td>
-                                                <td>{{ $item->pack_preference }}</td>
-                                                <td>{{ $item->preferred_day }} </td>
-                                              <td>{{ $item->preferred_time }}</td>
-                                                    <td>
-                                                        <a href="#"  class="btn btn-success view_btn"> <i class="fa fa-eye"></i>&nbsp; View</a>
-                                                                                                                                                                                                                   
+                                                 <td align="center">{{ $item->product_category }}</td>
+                                                <td align="center">{{ $item->product_name }}</td>
+                                                <td align="center">{{ $item->Quantity }}</td>
+                                                <td align="center">{{ $item->pack_preference }}</td>
+                                                <td align="center">{{ $item->preferred_day }} </td>
+                                              <td align="center">{{ $item->preferred_time }}</td>
+                                                    <td align="center">
+                                                        
+                                                                                <a href="{{ url('generate-report',$item->id ) }}"  class="btn btn-danger "> <i class="fa fa-cloud-download"></i>&nbsp;&nbsp;Download</a>                                                                                                                                   
                                                     </td>
                                             </tr>
                                              @endforeach

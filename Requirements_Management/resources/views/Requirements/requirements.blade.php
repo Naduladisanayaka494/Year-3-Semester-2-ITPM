@@ -34,12 +34,12 @@
                                     <table id="example" class="display table dataTable table-striped table-bordered shadow p-3 mb-5 bg-white rounded">
                                         <thead>
                                             <tr>
-                                                <th>Product Category</th>
-                                                <th>Product Name</th>
-                                                <th>Quantity</th>
-                                                <th>Packaging Preference</th>
-                                                <th>Preferred Delivery Date</th>
-                                             <th>Preferred Delivery Time</th>
+                                                <th><center>Product Category</center></th>
+                                                <th><center>Product Name</center></th>
+                                                <th><center>Quantity</center></th>
+                                                <th><center>Packaging Preference</center></th>
+                                                <th><center>Preferred Delivery Date</center></th>
+                                             <th><center>Preferred Delivery Time</center></th>
                                                 <th width = "200"><center>Manage</center></th>
                                             </tr>
                                         </thead>
@@ -49,12 +49,12 @@
                                              
                                                 
                                                 <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
-                                                 <td>{{ $item->product_category }}</td>
-                                                <td>{{ $item->product_name }}</td>
-                                                <td>{{ $item->Quantity }}</td>
-                                                <td>{{ $item->pack_preference }}</td>
-                                                <td>{{ $item->preferred_day }} </td>
-                                              <td>{{ $item->preferred_time }}</td>
+                                                 <td align="center">{{ $item->product_category }}</td>
+                                                <td align="center">{{ $item->product_name }}</td>
+                                                <td align="center">{{ $item->Quantity }}</td>
+                                                <td align="center">{{ $item->pack_preference }}</td>
+                                                <td align="center">{{ $item->preferred_day }} </td>
+                                              <td align="center">{{ $item->preferred_time }}</td>
                                                     <td>
                                                         <a href="{{ url('/requirements/' . $item->id . '/edit') }}"  class="btn btn-primary"> <i class="fa fa-edit"></i>&nbsp; Edit</a>
                                                          <form method="POST" action="{{ url('/requirements' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
