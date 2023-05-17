@@ -59,6 +59,7 @@
 </head>
 
 <body>
+  
   <div id="app">
     <div class="main-wrapper">
       <div class="navbar-bg"></div>
@@ -68,9 +69,6 @@
 @include('Admin.Adlayout.adslidebar')
 
 @include('Admin.Adlayout.adfooter')
-
-
-
 
 </body>
 
@@ -136,4 +134,5 @@
         <!-- START: Page Script JS-->        
         <script src="dist\js\datatable.script.js"></script>
         <!-- END: Page Script JS-->
+
 </html>

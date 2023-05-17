@@ -8,6 +8,7 @@
             <h1><i class="fa-solid fa-table"></i> &nbsp;Show Requirements</h1>
             </ul>
           </div>
+
            <!-- START: Breadcrumbs-->
                 <div class="row ">
                     <div class="col-12  align-self-center">
@@ -36,19 +37,14 @@
                                     <table id="example" class="display table dataTable table-striped table-bordered shadow p-3 mb-5 bg-white rounded">
                                         <thead>
                                             <tr>
-                                             
-                                                  <th>Customer Name</th>
-                                                  <th>Home Address</th>
-                                                <th>Email Address</th>
-                                                <th>Contact Number</th>
-                                                <th>Payment Method</th>
+                                                <th>#</th>
                                                 <th>Product Category</th>
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
                                                 <th>Packaging Preference</th>
                                                 <th>Preferred Delivery Date</th>
                                              <th>Preferred Delivery Time</th>
-                                                <th width = "200"><center>Manage</center></th>
+                                                <th><center>Manage</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -57,19 +53,16 @@
                                              
                                                 
                                                 <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
-                                               <td>{{ $item->customer_name }}</td>
-                                                <td>{{ $item->address }}</td>
-                                                <td>{{ $item->email }}</td>
-                                                <td>{{ $item->phone }}</td>
-                                                <td>{{ $item->payment_methods }}</td>
-                                                 <td>{{ $item->product_category }}</td>
+                                               
+                                                 <td class="req_id">{{ $item->id }}</td>
+                                                 <td >{{ $item->product_category }}</td>
                                                 <td>{{ $item->product_name }}</td>
                                                 <td>{{ $item->Quantity }}</td>
                                                 <td>{{ $item->pack_preference }}</td>
                                                 <td>{{ $item->preferred_day }} </td>
                                               <td>{{ $item->preferred_time }}</td>
                                                     <td>
-                                                        <a href="#"  class="btn btn-success"> <i class="fa fa-eye"></i>&nbsp; View</a>
+                                                        <a href="#"  class="btn btn-success view_btn"> <i class="fa fa-eye"></i>&nbsp; View</a>
                                                                                                                                                                                                                    
                                                     </td>
                                             </tr>
@@ -78,7 +71,7 @@
                                          
                                     </table>
                                                <a href="{{url('/ad-requirements')}}">
-                    <button type="button" class = "btn btn-primary"><i class="fa-solid fa-arrow-rotate-left"></i>Reset</button>
+                    <button type="button" class = "btn btn-primary"><i class="fa-solid fa-arrow-rotate-left"></i>&nbsp;Reset</button>
                     </a>
                                 </div>
                             </div>

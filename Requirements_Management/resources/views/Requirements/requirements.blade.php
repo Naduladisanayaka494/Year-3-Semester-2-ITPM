@@ -34,12 +34,6 @@
                                     <table id="example" class="display table dataTable table-striped table-bordered shadow p-3 mb-5 bg-white rounded">
                                         <thead>
                                             <tr>
-                                             
-                                                 <th>Customer Name</th>
-                                                  <th>Home Address</th>
-                                                <th>Email Address</th>
-                                                <th>Contact Number</th>
-                                                <th>Payment Method</th>
                                                 <th>Product Category</th>
                                                 <th>Product Name</th>
                                                 <th>Quantity</th>
@@ -55,11 +49,6 @@
                                              
                                                 
                                                 <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
-                                                <td>{{ $item->customer_name }}</td>
-                                                <td>{{ $item->address }}</td>
-                                                <td>{{ $item->email }}</td>
-                                                <td>{{ $item->phone }}</td>
-                                                <td>{{ $item->payment_methods }}</td>
                                                  <td>{{ $item->product_category }}</td>
                                                 <td>{{ $item->product_name }}</td>
                                                 <td>{{ $item->Quantity }}</td>

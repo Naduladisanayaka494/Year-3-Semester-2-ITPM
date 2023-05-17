@@ -10,7 +10,7 @@ class AdRequirementsController extends Controller
     {
          $search = $request['search'] ?? "";
         if($search !=""){
-            $requirements = Requirements::where('customer_name', 'LIKE', "%$search%")->orwhere('email', 'LIKE', "%$search%")->get();
+            $requirements = Requirements::where('product_category', 'LIKE', "%$search%")->orwhere('preferred_time', 'LIKE', "%$search%")->get();
 
         }else{
             $requirements = Requirements::all();

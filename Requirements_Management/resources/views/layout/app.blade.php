@@ -147,34 +147,7 @@
         <script src="dist\js\datatable.script.js"></script>
         <!-- END: Page Script JS-->
 
-        <script type="text/javascript">
-          function confirm(Confirm){
-
-            Confirm.preventDefault();
-
-            var urlToRedirect =Confirm.currentTarget.getAttribute('delete');
-
-            console.log(urlToRedirect);
-
-            swal({
-
-              title:"Are you sure you want to confirm",
-              text: "Confirm" ,
-              icon:"warning",
-              button:true,
-              dangerMdoe:true,
-            
-            })
-
-            .then((willCancel)=>
-            {
-              if (willCancel) {
-              window.location.href=urlToRedirect;
-              }
-            });
-          }
-
-        </script>
+    
 
 </html>
 
