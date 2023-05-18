@@ -27,7 +27,7 @@ Route::get('/ad-dashboard', [App\Http\Controllers\AdDashboardController::class, 
 Route::resource('/add-req', RequirementscreateController::class);
 Route::resource('/requirements', RequirementsController::class);
 Route::resource('/ad-requirements', AdRequirementsController::class);
-Route::resource('/generate-report/{id}', reportController::class);
+Route::resource('/generate-report', reportController::class);
 
 Auth::routes();
 

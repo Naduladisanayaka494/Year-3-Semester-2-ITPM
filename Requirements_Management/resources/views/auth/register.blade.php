@@ -6,7 +6,7 @@
   <style>
 
     body {
- background-image: url("/template/template/assets/img/avatar/trans.jpg");
+ background-image: url("/template/template/assets/img/avatar/wall3.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 150; /* You must set a specified height */
   background-position: center; /* Center the image */
@@ -52,13 +52,16 @@
         <div class="row">
           <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
-            <img alt="image" src="/template/template/assets/img/avatar/Admin.jpg" width="150" class="rounded-circle shadow p-3 mb-5 bg-body rounded">
-                <h6 class="display-4">Food To Your Doorstep </h6>
+          <br/><br/>
+                <h6 class="display-6">Food To Your Doorstep </h6>
             </div>
 
           <div class="card card-primary shadow p-3 mb-5 bg-body rounded">
             
-              <div class="card-header"><h4> <i class="fa-solid fa-star"></i> REGISTRATION</h4></div>
+              <div class="card-header"><h4 style="font-size: 28px; font-family:monospace;"> <i class="fa-solid fa-star"></i> Sign Up</h4>
+           
+            </div>
+             <p style="font-size: 20px; font-family:monospace; color:#808080;">Input your data to register to our system.</p>
               <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -96,9 +99,10 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
                     <br/><br/>
                      <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                      Register
-                    </button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" style="text-align: center; font-size: 16px;">
+                   Sign Up
+                   </button>
+
                   </div>
                   <div class="mt-5 text-muted text-center">
               Already have an account? <a href="{{ route('login') }}">Login Now</a>
@@ -116,6 +120,7 @@
   <script src="{{ asset('/template/template/node_modules/jquery/dist/jquery.min.js') }}"></script>
   <script src="{{ asset('/template/template/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('/template/template/assets/js/scripts.js') }}"></script>
+  
   <script>
           window.setTimeout(function() {
             $('.alert').fadeTo(500,0).slideUp(500,function(){
