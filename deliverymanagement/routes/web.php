@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\deliverymanagementController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\reportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,10 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('delivery.index');
 });
 
 Route::resource('/delivery', deliverymanagementController::class);
 Route::resource('/dashboard', DashboardController::class);
+Route::resource('/generate-report/{id}',reportController::class);
 

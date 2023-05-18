@@ -7,12 +7,22 @@ use Illuminate\Http\Request;
 class deliverymanagementController extends Controller
 {
   
-    public function index()
+    public function index(Request $request)
     {
-        $delivery = Delivery::all();
-      return view ('delivery.index')->with('delivery', $delivery);
+
+         $search = $request['search'] ?? "";
+        if($search !=""){
+            $delivery = Delivery::where('nic_number', 'LIKE', "%$search%")->orwhere('name', 'LIKE', "%$search%")->get();
+
+        }else{
+            $delivery = Delivery::all();
+        }
+        return view ('delivery.index')->with('delivery', $delivery);
+
+    
     }
 
+   
   
     public function create()
     {
@@ -28,11 +38,11 @@ class deliverymanagementController extends Controller
     }
 
   
-    public function show(string $id)
-    {
-       $delivery = Delivery::find($id);
-        return view('delivery.show')->with('delivery', $delivery);
-    }
+//  public function show(string $id)
+//     {
+//        $delivery = Delivery::find($id);
+//         return view('delivery.show')->with('delivery', $delivery);
+//     }
 
    
     public function edit(string $id)
@@ -55,5 +65,10 @@ class deliverymanagementController extends Controller
     {
         Delivery::destroy($id);
         return redirect('delivery')->with('flash_message', 'Delivery deleted!');  
+    }
+
+    public function report()
+    {
+        return view(' delivery.report ');
     }
 }

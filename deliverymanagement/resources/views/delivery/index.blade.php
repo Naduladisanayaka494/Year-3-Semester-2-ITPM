@@ -5,7 +5,7 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-truck"></i> &nbsp;  Delivery Management</h1>
+            <h1><i class="fa-solid fa-truck"></i> &nbsp;  Delivery Management</h1> 
             </ul>
           </div>
 
@@ -33,21 +33,21 @@
                                             <tr>
                                              
                                                
-                                            <th>Order_Id</th>
+                                            
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone_Number</th>
                                             <th>License_Number</th>
                                             <th>Nic_Number</th>
                                             <th>Occupation</th>
-                                            <th width = "250">Manage</th>
+                                            <th width = "300">Manage</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach($delivery as $item)
                                     <tr>
                                        
-                                        <td>{{ $item->order_id }}</td>
+                                       <input type="hidden" class="reqdelete_val_id" value="{{$item->id}}">
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->phone_number }}</td>
@@ -55,7 +55,7 @@
                                         <td>{{ $item->nic_number }}</td>
                                         <td>{{ $item->occupation }}</td>
                                         <td>
-                                            <a href="{{ url('/delivery/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ url('generate-report',$item->id  ) }}"  title="View Student"><button class="btn btn-success btn-sm"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></a>
                                             <a href="{{ url('/delivery/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>&nbsp; Edit</button></a>
                                             <form method="POST" action="{{ url('/delivery' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
@@ -71,6 +71,9 @@
                                         
                                               
                                     </table>
+                                    <a href="{{url('/delivery')}}">
+                    <button type="button" class = "btn btn-primary"><i class="fa-solid fa-arrow-rotate-left"></i>&nbsp;Reset</button>
+                    </a>
                                 </div>
                             </div>
                         </div> 
