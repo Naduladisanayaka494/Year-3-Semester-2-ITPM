@@ -3,7 +3,7 @@
           <div class="sidebar-brand">
 
           <a href="#" style="font-size:x-small"> Food To Your Doorstep</a> &emsp;
-          <img alt="image" src="{{ asset('/template/template/assets/img/avatar/SLIIT_Logo.png') }}" class="rounded-rectangular" height="70px" width="70px">
+          <img alt="image" src="{{ asset('/template/template/assets/img/avatar/SLIIT_Logo.png') }}" class="rounded-rectangular shadow-lg p-3 mb-5 bg-body rounded" height="70x" width="70px">
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="#"><img alt="image" src="{{ asset('/template/template/assets/img/avatar/SLIIT_Logo.png') }}" class="rounded-rectangular" height="50px" width="50px">FDS</a>
