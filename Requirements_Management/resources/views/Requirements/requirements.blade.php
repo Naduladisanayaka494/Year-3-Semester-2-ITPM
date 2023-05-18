@@ -15,7 +15,7 @@
                         <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
                             <div class="w-sm-100 mr-auto"><h4 class="mb-0" style="font-style: italic;">Requirements Information</h4></div>
                             <div class="btn-group mb-2">
-                                    <a href="{{url('add-req')}}"><button type="button" class="btn btn-outline-success rounded-btn btn-lg"><i class="fa-solid fa-square-plus"></i> &nbsp; New Requirements</button></a>
+                                    <a href="{{url('add-req')}}"><button type="button"class="btn btn-primary p-2 rounded mx-3 h4 mb-0 line-height-1 d-none d-lg-block"><span class="text-white font-weight-bold h4"><i class="fa-solid fa-file"></i>&nbsp;+</span></button></a>
                                 </div>
                          </div>
                     </div>

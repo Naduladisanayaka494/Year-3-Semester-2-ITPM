@@ -86,10 +86,10 @@
     </style>
 </head>
 <body>
-   <h5 style="font-family: 'Courier New', Courier, monospace;"><center>FOOD TO YOUR DOORSTEP</center></h5>
+   <h5 style="font-family: 'Courier New', Courier, monospace;"><center>FOOD TO YOUR DOORSTEP</center></h5><br/>
 
-   <img src="{{ public_path('/template/template/assets/img/avatar/logo.png' ) }}"  alt="Image" width="150" class="rounded-circle">
-   <br/><br/><br/>
+   <<center><img src="{{ public_path('/template/template/assets/img/avatar/logo.png' ) }}"  alt="Image" width="100" class="rounded-circle"></center>
+   <br/><br/><br/> 
     <div class="container">
         <div class="brand-section">
             <div class="row">

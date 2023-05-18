@@ -61,7 +61,7 @@
               <div class="card-header"><h4 style="font-size: 28px; font-family:monospace;"> <i class="fa-solid fa-star"></i> Sign Up</h4>
            
             </div>
-             <p style="font-size: 20px; font-family:monospace; color:#808080;">Input your data to register to our system.</p>
+             <p style="font-size: 20px; color:#808080;" class="display-6">Input your data to register to our system.</p>
               <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
