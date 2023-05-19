@@ -12,4 +12,4 @@ The online Food distribution system was designed for the reduce of food wastage 
 Then the generated order Id will be assigned to a delivery agent and deliver it. This system helps to build good relationship between Customer and Farmers with out Intermediaries which provide good economic benefits for customers and farmers . Because In Sri Lanka a lot of Intermediaries gain economic benefits which should be gained by farmers and customers. in this system we took Intermediaries out of the economic equation and make other end points very strong.
 
 # Technologies:
-### The Food Distribution Management platform developed using technologies such as Laravel Framework, PHP for server side, HTML,CSS,JS and Bootstrap Framework for client side and MySQL(phpMyAdmin XAMPP Server) dB as the database.
+### The Food Distribution Management platform developed using technologies such as Laravel Framework, PHP for server side, HTML,CSS,JS and Bootstrap Framework for client side and MySQL(phpMyAdmin XAMPP Server) DB as the database.
