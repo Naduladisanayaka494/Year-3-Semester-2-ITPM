@@ -68,12 +68,7 @@ class deliverymanagementController extends Controller
         return redirect('delivery')->with('flash_message', 'Delivery deleted!');  
     }
 
-    public function exportpdf()
-    {
-        $delivery=Delivery::all();
-
-        view()->share('delivery', $delivery);
-        $pdf = PDF::loadview('report');
-        return $pdf->download('delivery.pdf');
-    }
+  
+    
+        
 }

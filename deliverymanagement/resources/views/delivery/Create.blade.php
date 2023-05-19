@@ -43,31 +43,31 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-7">
                                                         <label>Order_Id</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="order_id" name = "order_id">
+                                                        <input type="text" class="form-control rounded border border-info" id="order_id" name = "order_id"required>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Name</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="name" name = "name">
+                                                        <input type="text" class="form-control rounded border border-info" id="name" name = "name" required>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Email</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="email" name = "email">
+                                                        <input type="text" class="form-control rounded border border-info" id="email" name = "email"required>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Phone_Number</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="phone_number" name = "phone_number">
+                                                        <input type="text" class="form-control rounded border border-info" id="phone_number" name = "phone_number"required>
                                                     </div>
                                                          <div class="form-group col-md-6">
                                                         <label>License_Number</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="license_number" name = "license_number">
+                                                        <input type="text" class="form-control rounded border border-info" id="license_number" name = "license_number"required>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Nic_Number</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="nic_number" name = "nic_number">
+                                                        <input type="text" class="form-control rounded border border-info" id="nic_number" name = "nic_number"required>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label>Occupation</label>
-                                                        <input type="text" class="form-control rounded border border-info" id="occupation" name = "occupation">
+                                                        <input type="text" class="form-control rounded border border-info" id="occupation" name = "occupation"required>
                                                     </div>
                                                    
                                                 <button type="submit" class="btn btn-success"><i class="fa-solid fa-check-circle"></i>&nbsp; SUBMIT</button>

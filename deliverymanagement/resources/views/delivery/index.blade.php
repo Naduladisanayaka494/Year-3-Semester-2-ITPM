@@ -5,14 +5,10 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-truck"></i> &nbsp;  Delivery Management</h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href = "/delivery" class = "btn btn-success">Generate Report</a>
+            <h1><i class="fa-solid fa-truck"></i> &nbsp;  Delivery Management</h1> 
             </ul>
           </div>
 
-          <div class="col-auto">
-            <a href = "/exportpdf" class = "btn btn-info">Export PDF</a>
-          </div>
 
            <!-- START: Breadcrumbs-->
                 <div class="row ">
@@ -60,7 +56,7 @@
                                         <td>{{ $item->nic_number }}</td>
                                         <td>{{ $item->occupation }}</td>
                                         <td>
-                                            <a href="{{ url('generate-report',$item->id  ) }}"  title="View Student"><button class="btn btn-success btn-sm"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></a>
+                                            <a href="{{ url('/exportpdf',$item->id  ) }}"  title="View Student"><button class="btn btn-success btn-sm"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></a>
                                             <a href="{{ url('/delivery/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>&nbsp; Edit</button></a>
                                             <form method="POST" action="{{ url('/delivery' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
