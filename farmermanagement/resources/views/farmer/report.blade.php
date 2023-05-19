@@ -96,25 +96,25 @@
         <div class="brand-section">
             <div class="row">
                 <div class="col-6">
-                    <h1 class="text-white">Monthly Feedback Report</h1>
+                    <h1 class="text-white"> Farmer Report</h1>
                 </div>
             </div>
         </div>
         
         <div class="body-section">
-            <h3 class="heading" style="text-align: center;">Feedback List</h3>
+            <h3 class="heading" style="text-align: center;">Farmer details List</h3>
             <br>
             <table class="table-bordered">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th class="w-20">Name</th>
+                        <th class="w-20">NIC</th>
+                        <th class="w-20">Address</th>
+                        <th class="w-20">Mobile</th>
                         <th class="w-20">Email</th>
-                        <th class="w-20">Overall Experience</th>
-                        <th class="w-20">Timely Response</th>
-                        <th class="w-20">Our Support</th>
-                        <th class="w-20">Overall Satisfaction</th>
-                        <th class="w-20">Comments</th>
+                        <th class="w-20">Type_of_Crops</th>
+                        
                         
                     </tr>
                 </thead>
