@@ -83,6 +83,7 @@
     <a href="#">Farmer Information</a>
     <a href="/dashboard">Dashboard</a>
     <a href="#">Contact Us</a>
+    <a href="/tracking">Google Tracking</a>
   </nav>
 
   <div class="container">

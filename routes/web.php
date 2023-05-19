@@ -28,6 +28,7 @@ Route::get('/',[HomeController::class, 'index'])->name('add');
 
 Route::get('/contact',[HomeController::class, 'contact'])->name('contact');
 Route::get('/aboutus',[HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/tracking',[HomeController::class, 'tracking'])->name('tracking');
 Route::get('/searchpr',[ProductController::class, 'search'])->name('search');
 
 

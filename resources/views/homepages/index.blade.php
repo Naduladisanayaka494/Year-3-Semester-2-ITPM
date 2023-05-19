@@ -72,6 +72,8 @@
     <a href="/aboutus">About</a>
     <a href="/display">Vegetables</a>
     <a href="#">Farmer Information</a>
+
+    <a href="/tracking">Google Tracking</a>
     <a href="/dashboard">Dashboard</a>
     <a href="/contact">Contact Us</a>
   </nav>
