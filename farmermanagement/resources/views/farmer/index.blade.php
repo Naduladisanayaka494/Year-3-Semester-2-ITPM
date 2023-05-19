@@ -56,7 +56,7 @@
                                         <td>{{ $item->type_of_crops }}</td>
                                         <td>
                                             <a href="{{ url('/farmer/' . $item->id) }}" title="View Student" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; view</a>
-                                            <a href="{{ url('/Farmer/' . $item->id . '/edit') }}" title="Edit Student" class="btn btn-primary btn-sm "><i class="fa fa-edit" aria-hidden="true"></i>&nbsp; edit</a>
+                                            <a href="{{ url('/farmer/' . $item->id . '/edit') }}" title="Edit Student" class="btn btn-primary btn-sm "><i class="fa fa-edit" aria-hidden="true"></i>&nbsp; edit</a>
                                             <form method="POST" action="{{ url('/farmer' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
