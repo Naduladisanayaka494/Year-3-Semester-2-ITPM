@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <style>
+     <style>
        
         h1,h2,h3,h4,h5,h6{
             margin: 0;
@@ -20,7 +20,7 @@
             margin-left: auto;
         }
         .brand-section{
-           background-color: #f1f1f1;
+           background-color: #0d1033;
            padding: 10px 40px;
         }
         .logo{
@@ -85,26 +85,67 @@
         }
     </style>
 </head>
-<body>
-   <h5 style="font-family: 'Courier New', Courier, monospace;"><center>FOOD TO YOUR DOORSTEP</center></h5><br/>
+<body><br/>
+   <h3 style="font-family: 'Courier New', Courier, monospace;"><center>FOOD TO YOUR DOORSTEP</center></h3><br/>
 
-   <<center><img src="{{ public_path('/template/template/assets/img/avatar/logo.png' ) }}"  alt="Image" width="100" class="rounded-circle"></center>
-   <br/><br/><br/> 
+<center><img src="{{ public_path('/template/template/assets/img/avatar/logo.png' ) }}"  alt="Image" width="100" class="rounded-circle"></center>
+   <br/><br/>
     <div class="container">
         <div class="brand-section">
             <div class="row">
                 <div class="col-6">
-                    <h4 class="text-white" style="font-family: 'Courier New', Courier, monospace; color:#529ca6">Monthly Feedback Report</h4>
+                    <h4 class="text-white" style="font-family: 'Courier New', Courier, monospace;">Customer Requirements Report</h4>
                 </div>
             </div>
         </div>
         
         <div class="body-section">
           
-           
+           <div class="row">
+                <div class="col-6">
+                    <h2 class="heading" style="font-family: 'Courier New', Courier, monospace;"><b>Reference No:</b>{{ $requirement->id}}</h2>
+                    <p class="sub-heading" style="font-family: 'Courier New', Courier, monospace;"><b>Email Address:</b> {{ $requirement->email}} </p>
+                </div>
+                <div class="row-6" align = "right">
+                    <p class="sub-heading" style="font-family: 'Courier New', Courier, monospace;"><b>Full Name:</b> {{ $requirement->customer_name}} </p>
+                    <p class="sub-heading" style="font-family: 'Courier New', Courier, monospace;"><b>Address:</b> {{ $requirement->address}} </p>
+                    <p class="sub-heading" style="font-family: 'Courier New', Courier, monospace;"><b>Phone Number:</b> {{ $requirement->phone}} </p>
+                    <p class="sub-heading" style="font-family: 'Courier New', Courier, monospace;"><b>Payment Method:</b>  {{ $requirement->payment_methods}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-section">
+            <h3 class="heading" style="font-family: 'Courier New', Courier, monospace;">Requirements Information</h3>
+            <br>
+            <table class="table-bordered">
+                <thead>
+                    <tr>
+                        <th style="font-family: 'Courier New', Courier, monospace; font-size:small" ><center>Product Category</center></th>
+                        <th style="font-family: 'Courier New', Courier, monospace; font-size:small" ><center>Product Name</center></th>
+                        <th style="font-family: 'Courier New', Courier, monospace; font-size:small" ><center>Quantity</center></th>
+                        <th style="font-family: 'Courier New', Courier, monospace; font-size:small" ><center>Packaging Preference</center></th>
+                        <th style="font-family: 'Courier New', Courier, monospace; font-size:small" ><center>Preferred Delivery Date</center></th>
+                         <th style="font-family: 'Courier New', Courier, monospace; font-size:small" ><center>Preferred Delivery Time</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-family: 'Courier New', Courier, monospace; font-size:small"><center>{{ $requirement->product_category}}</center></td>
+                        <td style="font-family: 'Courier New', Courier, monospace; font-size:small"><center>{{ $requirement->product_name}}<center></td>
+                        <td style="font-family: 'Courier New', Courier, monospace; font-size:small"><center>{{ $requirement->Quantity}}<center></td>
+                        <td style="font-family: 'Courier New', Courier, monospace; font-size:small"><center>{{ $requirement->pack_preference}}<center></td>
+                        <td style="font-family: 'Courier New', Courier, monospace; font-size:small"><center>{{ $requirement->preferred_day}}<center></td>
+                        <td style="font-family: 'Courier New', Courier, monospace; font-size:small"><center>{{ $requirement->preferred_time}}<center></td>
+                       
+                    </tr>
+                   
+                </tbody>
+            </table>
+            <br/><br/>
         
-            <p>&copy; 2022 All Rights Reserved. 
-                <a href="#" class="float-right">www.superfashion.com</a>
+            <p>&copy; 2023 All Rights Reserved. 
+                <a href="#" class="float-right">www.foodstep.com</a>
             </p>
             
     </div>      
