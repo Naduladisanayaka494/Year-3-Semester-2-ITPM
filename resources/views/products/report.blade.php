@@ -121,7 +121,7 @@
 
         <div class="footer">
             &copy; {{ date('Y') }} All Rights Reserved. 
-            <a href="#">www.superfashion.com</a>
+            <a href="#">www.foods to your door step.com</a>
         </div>
     </div>
 </body>
