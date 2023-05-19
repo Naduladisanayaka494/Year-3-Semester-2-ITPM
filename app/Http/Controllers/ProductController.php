@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Vegetable;
 
+
 use App\Models\Req;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -31,12 +32,14 @@ class ProductController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+    //  */
     public function create()
     {
         $data=Req::all();
         return view('products.create');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -46,6 +49,14 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'itemcode' => 'required',
+            'pname' => 'required',
+            'qty' => 'required|numeric',
+            'price' => 'required|numeric',
+        ]);
+
+
         $input = $request->all();
         Product::create($input);
         return redirect('product')->with('flash_message', 'Product Addedd!',);
