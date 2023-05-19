@@ -41,7 +41,7 @@
                                         <th width = "40">Mobile</th>
                                         <th width = "40">Email</th>
                                         <th width = "30">Type_of_Crops</th>
-                                        <th width ="800">Actions</th>
+                                        <th width ="500">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>

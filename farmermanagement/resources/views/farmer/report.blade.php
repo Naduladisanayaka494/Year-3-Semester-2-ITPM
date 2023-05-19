@@ -119,18 +119,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                                <!-- @foreach($data as $item)
+                                 @foreach($data as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->Name }}</td>
-                                        <td>{{ $item->Email }}</td>
-                                        <td>{{ $item->Overall_Experience }}</td>
-                                        <td>{{ $item->Timely_Response }}</td>
-                                        <td>{{ $item->Our_Support }}</td>
-                                        <td>{{ $item->Overall_Satisfaction }}</td>
-                                        <td>{{ $item->Comment }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->nic }}</td>
+                                        <td>{{ $item->address }}</td>
+                                        <td>{{ $item->mobile }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->type_of_crops }}</td>
+                        
  
-                                @endforeach -->
+                                @endforeach 
                                 </tbody>
             </table>
             <br>
