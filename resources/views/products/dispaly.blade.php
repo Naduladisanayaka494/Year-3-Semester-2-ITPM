@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vegetable Page</title>
+  <title>Report</title>
   <style>
     /* CSS styles */
     body {

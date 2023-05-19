@@ -71,7 +71,7 @@
                                         @endforeach
                                         </tbody>
                                     </table>
-                                    <a class="btn btn-success" href="{{ route('pdf' ) }}" >Download PDF</a>
+                                    <a class="btn btn-success" href="/exportpdf" >Download PDF</a>
                                 </div>
                             </div>
                         </div>

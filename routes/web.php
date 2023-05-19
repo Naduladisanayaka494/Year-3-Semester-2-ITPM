@@ -24,6 +24,7 @@ Route::resource('/product', ProductController::class);
 Route::resource('/vegetable', VegetableController::class);
 Route::get('/display',[ProductController::class, 'display'])->name('display');
 Route::get('/pdf',[ProductController::class, 'pdf'])->name('pdf');
+Route::get('/exportpdf',[ProductController::class, 'exportpdf'])->name('report');
 Route::get('/',[HomeController::class, 'index'])->name('add');
 
 Route::get('/contact',[HomeController::class, 'contact'])->name('contact');

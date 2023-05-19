@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Vegetable;
+
 use App\Models\Req;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -114,6 +116,17 @@ class ProductController extends Controller
 
 
     }
+    public function  exportpdf(){
+
+        //$datas = Req::all();
+        $vegetable = Vegetable::all();
+
+        $pdf = Pdf::loadView('products.report', compact('vegetable'));
+        return $pdf->download('products report.pdf');
+        
+    }
+    // $pdf = PDF::loadview('delivery.report', compact('data'));
+    // return $pdf->download('Delivery Agent-Report.pdf');
 
     public function search() {
         $search_text = request()->query('query'); // Get the value of the "query" parameter from the URL

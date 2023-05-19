@@ -9,5 +9,5 @@ class Vegetable extends Model
 {
     protected $table = 'vegetables';
     protected $primaryKey = 'id';
-    protected $fillable = [ 'pname', 'price','qty','photo'];
+    protected $fillable = [ 'pname', 'price','qty'];
 }
