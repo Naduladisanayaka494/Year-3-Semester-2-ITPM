@@ -4,7 +4,7 @@
   <div class="card-header">Farmer Details Page</div>
   <div class="card-body">
       
-      <form action="{{ url('farmer/' .$farmer->id) }}" method="post">
+      <form action="{{ url('farmer/' .$Farmer->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
         <input type="hidden" name="id" id="id" value="{{$farmer->id}}" id="id"  />
