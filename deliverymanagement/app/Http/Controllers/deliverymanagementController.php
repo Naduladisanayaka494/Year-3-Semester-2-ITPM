@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Delivery;
 use Illuminate\Http\Request;
+use PDF;
 
 class deliverymanagementController extends Controller
 {
@@ -67,8 +68,12 @@ class deliverymanagementController extends Controller
         return redirect('delivery')->with('flash_message', 'Delivery deleted!');  
     }
 
-    public function report()
+    public function exportpdf()
     {
-        return view(' delivery.report ');
+        $delivery=Delivery::all();
+
+        view()->share('delivery', $delivery);
+        $pdf = PDF::loadview('report');
+        return $pdf->download('delivery.pdf');
     }
 }

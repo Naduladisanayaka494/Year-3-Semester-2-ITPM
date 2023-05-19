@@ -22,5 +22,6 @@ Route::get('/', function () {
 
 Route::resource('/delivery', deliverymanagementController::class);
 Route::resource('/dashboard', DashboardController::class);
-Route::resource('/generate-report/{id}',reportController::class);
+//Export PDF
+Route::resource('/exportpdf',deliverymanagementController::class);
 

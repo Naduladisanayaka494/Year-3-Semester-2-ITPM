@@ -5,8 +5,13 @@
 <section class="section">
           <div class="section-header">
             <ul>
-            <h1><i class="fa-solid fa-truck"></i> &nbsp;  Delivery Management</h1> 
+            <h1><i class="fa-solid fa-truck"></i> &nbsp;  Delivery Management</h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href = "/delivery" class = "btn btn-success">Generate Report</a>
             </ul>
+          </div>
+
+          <div class="col-auto">
+            <a href = "/exportpdf" class = "btn btn-info">Export PDF</a>
           </div>
 
            <!-- START: Breadcrumbs-->
