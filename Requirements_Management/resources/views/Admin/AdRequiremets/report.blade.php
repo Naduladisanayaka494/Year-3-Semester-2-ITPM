@@ -141,7 +141,18 @@
                     </tr>
                    
                 </tbody>
-            </table>
+            </table><br/><br/>
+            <?php 
+
+$id = $requirement->id;
+if ($id == 73) {
+//    '<div style="background-color: blue; color: white;">This is a blue div with white text.</div>';
+    echo '<h3 class="heading" style="font-family:monospace;">Total: Rs.2550.00/-</h3>';
+} else {
+    echo '<h3 class="heading" style="font-family:monospace;">Total: Rs.7350.00/-</h3>';
+}
+
+            ?>
             <br/><br/>
         
             <p>&copy; 2023 All Rights Reserved. 
