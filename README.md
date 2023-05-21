@@ -2,7 +2,7 @@
 
 # Project Group - 036
 ### Group Leader - IT20247140 - Disanayaka D.M.N.J.
-### Member 2 -  IT20252854 - 
+### Member 2 -  IT20252854 - Premakumara Y.K.V
 ### Member 3 - IT20642150 - Lakshan J.A.T
 ### Member 4 - IT20610852 - Fernando M.P.T.K
 
