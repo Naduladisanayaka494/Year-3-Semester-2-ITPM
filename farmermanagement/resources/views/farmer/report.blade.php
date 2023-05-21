@@ -96,18 +96,18 @@
         <div class="brand-section">
             <div class="row">
                 <div class="col-6">
-                    <h1 class="text-white"> Farmer Report</h1>
+                    <h1 class="text-white">Farmer Details Report</h1>
                 </div>
             </div>
         </div>
         
         <div class="body-section">
-            <h3 class="heading" style="text-align: center;">Farmer details List</h3>
+            <h3 class="heading" style="text-align: center;">Farmer List</h3>
             <br>
             <table class="table-bordered">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                    <th>ID</th>
                         <th class="w-20">Name</th>
                         <th class="w-20">NIC</th>
                         <th class="w-20">Address</th>
@@ -115,11 +115,10 @@
                         <th class="w-20">Email</th>
                         <th class="w-20">Type_of_Crops</th>
                         
-                        
                     </tr>
                 </thead>
                 <tbody>
-                                 @foreach($data as $item)
+                                @foreach($data as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
@@ -136,7 +135,7 @@
             <br>
         
             <p>&copy; 2022 All Rights Reserved. 
-                <a href="#" class="float-right">www.superfashion.com</a>
+                <a href="#" class="float-right">www.foodstep.com</a>
             </p>
             
     </div>      
