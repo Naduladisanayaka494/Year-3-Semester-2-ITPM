@@ -1,7 +1,7 @@
 # Topic - FOOD TO YOUR DOORSTEP
 # Project Group - 036
 # User Group :- Customer & Admin
-### Member 3 - IT20642150 - Lakshan J.A.T(Function :- Customer Requirements Management / Login & Register)
+### Member 3 - IT20642150 - Lakshan J.A.T(Function :- Customer Requirements Management / Login & Register -> Admin + User)
 
 
 #### Brief Description of your Solution - 
