@@ -25,3 +25,4 @@ Route::get('/', function () {
 
 Route::resource('/farmer', FarmerController::class);
 Route::resource('/exportpdf', PdfgenerateController::class);
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
