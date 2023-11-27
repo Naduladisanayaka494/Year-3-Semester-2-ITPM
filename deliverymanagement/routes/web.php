@@ -17,7 +17,7 @@ use App\Http\Controllers\reportController;
 */
 
 Route::get('/', function () {
-    return view('delivery.index');
+    return view('Dashboard.dashboard');
 });
 
 Route::resource('/delivery', deliverymanagementController::class);

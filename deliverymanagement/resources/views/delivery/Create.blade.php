@@ -41,10 +41,10 @@
                                              <form action = "{{ url('delivery') }}"  method="post">
                                                  {!! csrf_field() !!}
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-7">
+                                                    <!-- <div class="form-group col-md-7">
                                                         <label>Order_Id</label>
                                                         <input type="text" class="form-control rounded border border-info" id="order_id" name = "order_id"required>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="form-group col-md-6">
                                                         <label>Name</label>
                                                         <input type="text" class="form-control rounded border border-info" id="name" name = "name" required>

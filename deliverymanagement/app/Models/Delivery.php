@@ -10,6 +10,6 @@ class Delivery extends Model
     
     protected $table = 'deliverymanagement';
     protected $primaryKey = 'id';
-    protected $fillable = ['order_id','name', 'email', 'phone_number','license_number','nic_number','occupation'];
+    protected $fillable = ['name', 'email', 'phone_number','license_number','nic_number','occupation'];
 
 }

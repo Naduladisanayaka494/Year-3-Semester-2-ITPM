@@ -129,7 +129,7 @@
             <br>
         
             <p>&copy; 2023 All Rights Reserved. 
-                <a href="#" class="float-right">www.superfashion.com</a>
+                <a href="#" class="float-right">www.foodstep.com</a>
             </p>
             
     </div>      

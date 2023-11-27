@@ -8,8 +8,8 @@
         {!! csrf_field() !!}
         @method("PATCH")
         <input type="hidden" name="id" id="id" value="{{$delivery->id}}" id="id" />
-        <label>Order_Id</label></br>
-        <input type="text" name="order_id" id="order_id" value="{{$delivery->order_id}}" class="form-control"></br>
+        <!-- <label>Order_Id</label></br> 
+        <input type="text" name="order_id" id="order_id" value="{{$delivery->order_id}}" class="form-control"></br> -->
         <label>Name</label></br>
         <input type="text" name="name" id="name" value="{{$delivery->name}}" class="form-control"></br>
         <label>Email</label></br>
